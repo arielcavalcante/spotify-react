@@ -1,0 +1,8 @@
+.navbar-component {
+	background-color: #000000;
+	width: 16rem;
+	min-width: 16rem;
+	height: 100vh;
+	display: block;
+	padding: 1rem;
+}

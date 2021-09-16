@@ -1,0 +1,27 @@
+* {
+	margin: 0;
+	padding: 0;
+	color: inherit;
+	font-family: inherit;
+	box-sizing: border-box;
+}
+body {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	background-color: #121212;
+}
+
+.App {
+	display: flex;
+}
+a:hover {
+	fill: white;
+	color: white;
+}
+main {
+	display: flex;
+	width: 100vw;
+}
+ul li {
+	list-style-type: none;
+}

@@ -1,0 +1,36 @@
+.card-component {
+	display: block;
+	padding: 1rem;
+	background-color: #181818;
+}
+.card-component:hover {
+	background-color: #282828;
+}
+.card__clickarea {
+	text-decoration: none;
+}
+.card__thumbnail {
+	height: fit-content;
+	width: fit-content;
+}
+.card__thumbnail img {
+	height: auto;
+	width: 100%;
+	min-width: 11.25rem;
+	max-width: 12.25rem;
+	border-radius: 1rem;
+}
+.card__text-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem 0;
+	row-gap: 0.375rem;
+}
+.card__title {
+	font-weight: bolder;
+}
+.card__subtitle {
+	color: #b3b3b3;
+	font-weight: 600;
+	font-size: 0.875rem;
+}

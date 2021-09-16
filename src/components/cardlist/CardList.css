@@ -1,0 +1,19 @@
+.cardlist {
+	height: fit-content;
+	width: calc(100vw - 16rem);
+	margin: 1rem;
+	display: flex;
+	column-gap: 1.5rem;
+	overflow-x: auto;
+}
+
+.hide-scrollbar {
+	overflow: scroll;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+	display: none;
+	background: transparent;
+	width: 0px;
+}

@@ -1,15 +1,38 @@
 import React from 'react';
-import { Header } from '../components'
+import { CardList, NavBar } from '../components';
 
 export default function Home() {
+	const cardlist = [
+		{
+			title: 'Indo e Voltando',
+			type: 'podcast',
+		},
+		{
+			title: 'QuebraDev',
+			type: 'podcast',
+		},
+		{
+			title: 'QuebraDev',
+			type: 'podcast',
+		},
+		{
+			title: 'QuebraDev',
+			type: 'podcast',
+		},
+		{
+			title: 'QuebraDev',
+			type: 'podcast',
+		},
+		{
+			title: 'QuebraDev',
+			type: 'podcast',
+		},
+	];
+
 	return (
-	<div>
-		<Header
-			title="Sputnik" 
-			list={[{title:"Home", link:'/home'}, 
-						 {title:"F.A.Q", link:'/faq'}
-			]}
-		/>
-	</div>
+		<main>
+			<NavBar />
+			<CardList cardlist={cardlist} />
+		</main>
 	);
 }
