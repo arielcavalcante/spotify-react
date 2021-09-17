@@ -14,7 +14,7 @@ export default function CardList({
 	type,
 }) {
 	return (
-		<div className='cardlist hide-scrollbar'>
+		<div className='cardlist-component hide-scrollbar'>
 			{cardlist.map((c, i) => {
 				return <Card key={uuid()} {...c} />;
 			})}

@@ -21,6 +21,11 @@ a:hover {
 main {
 	display: flex;
 	width: 100vw;
+	background: linear-gradient(180deg, #501218 0%, #121212 30%);
+}
+ul {
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 ul li {
 	list-style-type: none;

@@ -8,6 +8,7 @@ export default function Card({ alt, link, source, subtitle, title, type }) {
 			<Link to={link || '/'} type={type || 'Álbum'} className='card__clickarea'>
 				<figure className='card__thumbnail'>
 					<img
+						className={type}
 						alt={`Capa do ${type} ${title}` || 'missing alt'}
 						src={source || `assets/${title}.jfif`}
 					/>

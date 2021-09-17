@@ -1,19 +1,28 @@
-.cardlist {
-	height: fit-content;
-	width: calc(100vw - 16rem);
-	margin: 1rem;
+.cardlist-component {
+	height: 17rem;
+	max-width: calc(100vw - 16rem);
+	margin: 1rem 0 1rem 1rem;
 	display: flex;
-	column-gap: 1.5rem;
+	gap: 1.5rem;
+	overflow-y: hidden;
 	overflow-x: auto;
 }
 
 .hide-scrollbar {
-	overflow: scroll;
+	overflow-x: scroll;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 }
 .hide-scrollbar::-webkit-scrollbar {
 	display: none;
 	background: transparent;
-	width: 0px;
+	width: 0;
+}
+
+@media only screen and (min-width: 769px) {
+	.cardlist-component {
+		height: 18rem;
+		margin: 1rem;
+		flex-wrap: wrap;
+	}
 }

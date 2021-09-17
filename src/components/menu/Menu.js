@@ -1,6 +1,6 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './Menu.css';
 
@@ -9,17 +9,22 @@ import { logo } from '../../icons';
 export default function Menu({ list }) {
 	return (
 		<div className='menu-component'>
-			<Link to='/' className='logo'>
+			<NavLink className='logo' to='/'>
 				{logo}
-			</Link>
+			</NavLink>
 			<ul className='menu__list'>
 				{list.map((l, i) => {
 					return (
 						<li key={uuid()}>
-							<Link to={l.link} className='menu__link'>
+							<NavLink
+								className='menu__link'
+								activeClassName='active'
+								exact
+								to={l.link}
+							>
 								{l.icon}
 								<span>{l.title}</span>
-							</Link>
+							</NavLink>
 						</li>
 					);
 				})}

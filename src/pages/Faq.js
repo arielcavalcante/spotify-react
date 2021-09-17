@@ -1,5 +1,9 @@
 import React from 'react';
-
+import { NavBar } from '../components';
 export default function Faq() {
-	return <div>FAQ</div>;
+	return (
+		<div>
+			<NavBar />
+		</div>
+	);
 }
