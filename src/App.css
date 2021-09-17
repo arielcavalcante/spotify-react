@@ -13,14 +13,16 @@ body {
 
 .App {
 	display: flex;
+	position: relative;
 }
 a:hover {
 	fill: white;
 	color: white;
 }
 main {
+	height: 100vh;
+	width: 100%;
 	display: flex;
-	width: 100vw;
 	background: linear-gradient(180deg, #501218 0%, #121212 30%);
 }
 ul {

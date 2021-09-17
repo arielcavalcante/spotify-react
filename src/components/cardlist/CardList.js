@@ -7,6 +7,7 @@ import './CardList.css';
 export default function CardList({
 	alt,
 	cardlist,
+	classprop,
 	link,
 	source,
 	subtitle,
@@ -14,9 +15,9 @@ export default function CardList({
 	type,
 }) {
 	return (
-		<div className='cardlist-component hide-scrollbar'>
+		<div className={`cardlist-component${classprop || ''} hide-scrollbar`}>
 			{cardlist.map((c, i) => {
-				return <Card key={uuid()} {...c} />;
+				return <Card key={uuid()} classprop={classprop} {...c} />;
 			})}
 		</div>
 	);

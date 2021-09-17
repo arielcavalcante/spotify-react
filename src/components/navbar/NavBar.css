@@ -1,5 +1,6 @@
 .navbar-component {
-	background-color: #000000;
+	position: fixed;
+	background-color: black;
 	width: 16rem;
 	min-width: 16rem;
 	height: 100vh;

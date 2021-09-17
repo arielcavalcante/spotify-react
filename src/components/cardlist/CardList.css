@@ -1,13 +1,10 @@
 .cardlist-component {
 	height: 17rem;
-	max-width: calc(100vw - 16rem);
-	margin: 1rem 0 1rem 1rem;
 	display: flex;
 	gap: 1.5rem;
 	overflow-y: hidden;
 	overflow-x: auto;
 }
-
 .hide-scrollbar {
 	overflow-x: scroll;
 	scrollbar-width: none;
@@ -19,10 +16,13 @@
 	width: 0;
 }
 
-@media only screen and (min-width: 769px) {
+.cardlist-component.card-alt {
+	height: 5rem;
+}
+
+/* @media only screen and (min-width: 769px) {
 	.cardlist-component {
 		height: 18rem;
-		margin: 1rem;
 		flex-wrap: wrap;
 	}
-}
+} */ ;
