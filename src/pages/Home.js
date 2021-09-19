@@ -95,7 +95,7 @@ export default function Home() {
 			<div className='content-spacing'>
 				<Section
 					title='Boa tarde'
-					classprop=' card-alt'
+					classprop='--card-alt'
 					cardlist={recentlyplayed}
 				></Section>
 				<Section title='Seus programas' cardlist={podcasts}></Section>

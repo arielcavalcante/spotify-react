@@ -19,11 +19,11 @@
 	padding: 1rem;
 	display: flex;
 	align-items: center;
+	border-radius: 0.25rem;
 }
 .menu__link.active {
 	color: white;
 	background-color: #282828;
-	border-radius: 0.25rem;
 }
 .menu__link svg {
 	fill: #b3b3b3;

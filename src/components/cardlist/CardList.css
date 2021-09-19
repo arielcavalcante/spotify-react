@@ -1,4 +1,4 @@
-.cardlist-component {
+[class^='cardlist-component'] {
 	height: 17rem;
 	display: flex;
 	gap: 1.5rem;
@@ -16,7 +16,7 @@
 	width: 0;
 }
 
-.cardlist-component.card-alt {
+.cardlist-component--card-alt {
 	height: 5rem;
 }
 
@@ -25,4 +25,4 @@
 		height: 18rem;
 		flex-wrap: wrap;
 	}
-} */ ;
+} */
