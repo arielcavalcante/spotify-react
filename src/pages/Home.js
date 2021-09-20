@@ -94,7 +94,7 @@ export default function Home() {
 			<NavBar />
 			<div className='content-spacing'>
 				<Section
-					title='Boa tarde'
+					title='Boa noite'
 					classprop='--card-alt'
 					cardlist={recentlyplayed}
 				></Section>

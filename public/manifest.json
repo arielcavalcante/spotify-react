@@ -1,25 +1,40 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+	"name": "Spotify",
+	"short_name": "Spotify",
+	"icons": [
+		{
+			"src": "https://open.scdn.co/cdn/images/icons/Spotify_16.aa3775a0.png",
+			"type": "image/png",
+			"sizes": "16x16"
+		},
+		{
+			"src": "https://open.scdn.co/cdn/images/icons/Spotify_32.01f2b5c3.png",
+			"type": "image/png",
+			"sizes": "32x32"
+		},
+		{
+			"src": "https://open.scdn.co/cdn/images/icons/Spotify_128.c9ce2f2e.png",
+			"type": "image/png",
+			"sizes": "128x128"
+		},
+		{
+			"src": "https://open.scdn.co/cdn/images/icons/Spotify_256.c8416b60.png",
+			"type": "image/png",
+			"sizes": "256x256"
+		},
+		{
+			"src": "https://open.scdn.co/cdn/images/icons/Spotify_512.49a0bf03.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		},
+		{
+			"src": "https://open.scdn.co/cdn/images/icons/Spotify_1024.4027f848.png",
+			"type": "image/png",
+			"sizes": "1024x1024"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#121212",
+	"theme_color": "#121212"
 }
