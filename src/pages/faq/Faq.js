@@ -17,6 +17,7 @@ export default function Faq() {
 				</div>
 				<div className='topsolutions-container'>
 					<div className='topsolutions'>
+						<h3 className='mobile section__link'> MELHORES SOLUÇÕES</h3>
 						<h3 className='section__link'>AJUDA COM A COBRANÇA</h3>
 						<Link>Atualizações de preço</Link>
 					</div>
