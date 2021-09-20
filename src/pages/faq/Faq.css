@@ -1,0 +1,110 @@
+#faq-page {
+	background: white;
+	display: block;
+}
+#faq-page .navbar-component {
+	background-color: black;
+	height: 5rem;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	position: unset;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+#faq-page .logo {
+	margin: 0;
+}
+#faq-page .menu__list {
+	display: flex;
+	align-items: center;
+}
+#faq-page .menu__link {
+	height: 100%;
+	width: fit-content;
+	background-color: unset;
+	color: white;
+}
+#faq-page .menu__link:hover {
+	color: #1ed760;
+}
+#faq-page .menu__link .home,
+#faq-page .menu__link .faq {
+	display: none;
+}
+section.bubblebackground {
+	padding: 0 0.5rem 1.5rem;
+	background: url(https://support.scdn.co/web/_next/static/assets/9c300fb/search-desktop.webp)
+		top/100% no-repeat;
+	display: block;
+}
+.search-container {
+	width: fit-content;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+.search-container h1 {
+	font-size: 4rem;
+	padding: 5rem 0 2.5rem;
+}
+.search-container input {
+	appearance: none;
+	border: none;
+	border-color: none;
+	color: black;
+	font-size: 1rem;
+	width: 46.5rem;
+	padding: 0.875rem 0.875rem 0.875rem 3rem;
+	border-radius: 0.375rem;
+	box-shadow: inset 0 0 0 1px var(--essential-subdued, #868686);
+	outline: 0;
+}
+.search-container div {
+	position: relative;
+	margin-bottom: 1.5rem;
+}
+.search-container div::before {
+	content: url('./suporte.svg');
+	height: 1.5rem;
+	width: 1.5rem;
+	position: absolute;
+	top: 0.75rem;
+	left: 0.75rem;
+	z-index: 3;
+}
+.topsolutions-container {
+	text-align: center;
+	width: 100%;
+	padding: 1.875rem 0 2.5rem;
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+}
+.topsolutions {
+	width: 15.5rem;
+}
+.topsolutions .section__link {
+	font-size: 0.8125rem;
+	margin: 0.5rem 0;
+}
+.topsolutions a {
+	font-weight: 600;
+	text-decoration: none;
+	display: block;
+	margin: 0 0 1rem;
+}
+.topsolutions a:hover {
+	text-decoration: underline;
+}
+
+@media (pointer: coarse) {
+	.bubblebackground {
+		height: 65%;
+		background: url(https://support.scdn.co/web/_next/static/assets/9c300fb/search-mobile.webp)
+			top/100% no-repeat #1c2963;
+	}
+}

@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Menu } from '../';
 
 import './NavBar.css';
-import { home, faq } from '../../icons';
+import { home, faq, logo } from '../../icons';
 
 export default function NavBar({ title }) {
 	return (
 		<nav className='navbar-component'>
+			<Link className='logo'>{logo}</Link>
 			<Menu
 				list={[
 					{ icon: home, title: 'Início', link: '/' },

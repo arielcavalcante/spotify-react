@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBar, Section } from '../components';
+import { NavBar, Section } from '../../components';
 
 import './Home.css';
 
@@ -90,9 +90,9 @@ export default function Home() {
 	];
 
 	return (
-		<main>
+		<main id='home-page'>
 			<NavBar />
-			<div className='content-spacing'>
+			<div className='page-content'>
 				<Section
 					title='Boa noite'
 					classprop='--card-alt'

@@ -27,3 +27,9 @@
 	font-weight: 600;
 	text-decoration: none;
 }
+
+@media (pointer: coarse) {
+	.section__link {
+		display: none;
+	}
+}
