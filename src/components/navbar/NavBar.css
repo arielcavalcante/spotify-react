@@ -12,7 +12,7 @@
 	z-index: 1;
 }
 
-@media (pointer: coarse) {
+@media (pointer: coarse), (max-width: 768px) {
 	.navbar-component {
 		background-color: black;
 		height: 5rem;

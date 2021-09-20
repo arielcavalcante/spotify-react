@@ -39,7 +39,8 @@ section.bubblebackground {
 	align-items: center;
 	justify-content: center;
 	padding: 0 0.5rem 1.5rem;
-	background: url(https://support.scdn.co/web/_next/static/assets/9c300fb/search-desktop.webp);
+	background: url(https://support.scdn.co/web/_next/static/assets/9c300fb/search-desktop.webp)
+		top/100% no-repeat #1c2963;
 }
 .search-container {
 	width: fit-content;
@@ -87,7 +88,7 @@ section.bubblebackground {
 	padding: 1.875rem 0 2.5rem;
 	display: flex;
 	justify-content: center;
-	gap: 0.5rem;
+	/* gap: 0.5rem; */
 }
 .topsolutions {
 	width: 15.5rem;
@@ -113,11 +114,22 @@ section.bubblebackground {
 #faq-page .logo {
 	display: block;
 }
-@media (pointer: coarse), (max-width: 768px) {
-	section.bubblebackground {
-		background: url(https://support.scdn.co/web/_next/static/assets/9c300fb/search-mobile.webp)
-			top/100% no-repeat #1c2963;
+
+@media (min-width: 1140px) {
+	#faq-page .navbar-component {
+		gap: 50rem;
 	}
+}
+
+@media (pointer: coarse), (max-width: 977px) {
+	#faq-page .navbar-component {
+		gap: unset;
+		justify-content: space-between;
+	}
+	.topsolutions-container {
+		max-width: 48rem;
+	}
+
 	.topsolutions-container {
 		text-align: left;
 		flex-direction: column;
@@ -131,5 +143,18 @@ section.bubblebackground {
 	}
 	.mobile.section__link {
 		display: block;
+	}
+}
+
+@media (pointer: coarse), (max-width: 768px) {
+	section.bubblebackground .search-container h1 {
+		font-size: 3rem;
+	}
+	.topsolutions-container {
+		max-width: 36rem;
+	}
+	section.bubblebackground {
+		background: url(https://support.scdn.co/web/_next/static/assets/9c300fb/search-mobile.webp)
+			top/100% no-repeat #1c2963;
 	}
 }

@@ -8,7 +8,9 @@ import { home, faq, logo } from '../../icons';
 export default function NavBar({ title }) {
 	return (
 		<nav className='navbar-component'>
-			<Link className='logo'>{logo}</Link>
+			<Link className='logo' to='/'>
+				{logo}
+			</Link>
 			<Menu
 				list={[
 					{ icon: home, title: 'Início', link: '/' },
