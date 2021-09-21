@@ -13,7 +13,7 @@
 	font-size: 2rem;
 }
 
-@media (pointer: coarse), (max-width: 768px) {
+@media (pointer: coarse), (max-width: 753px) {
 	.page-content {
 		height: calc(100vh - 5rem);
 		width: 100vw !important;

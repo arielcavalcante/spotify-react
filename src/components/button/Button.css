@@ -1,0 +1,12 @@
+.calltoaction {
+	color: black;
+	font-weight: 800;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	background-color: #1ed760;
+	padding: 0.875rem 2rem;
+	margin: auto;
+	border: none;
+	border-radius: 50rem;
+	display: block;
+}

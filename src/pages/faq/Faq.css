@@ -99,20 +99,23 @@ section.bubblebackground {
 	width: 15.5rem;
 	margin: 0 1.25rem;
 }
-.topsolutions .category__link {
-	font-weight: 600;
-}
-.topsolutions .category__smallcaps {
-	font-size: 0.8125rem;
-	margin: 0.5rem 0;
-}
 #faq-page .category__link {
+	font-size: 1.125rem;
+	font-weight: 600;
 	text-decoration: none;
 	display: block;
 	margin: 0 0 1rem;
+	line-height: 1.5;
 }
 #faq-page .category__link:hover {
 	text-decoration: underline;
+}
+.topsolutions .category__smallcaps {
+	color: #d9d9d9;
+	font-size: 0.75rem;
+	margin: 0.5rem 0;
+	letter-spacing: 0.0625rem;
+	word-spacing: 0.125rem;
 }
 .mobile.category__smallcaps {
 	display: none;
@@ -128,22 +131,62 @@ section.bubblebackground {
 	justify-content: center;
 }
 
+/* --------------- Comunity Section --------------- */
+
+.comunity-section {
+	background-color: white;
+	padding: 5rem 1rem;
+	width: 100%;
+	justify-content: space-between;
+}
+.comunity-section h1 {
+	color: black;
+	text-align: center;
+	font-size: 3rem;
+	padding-bottom: 2rem;
+}
+.comunity-section p {
+	font-size: 1.125rem;
+	text-align: center;
+	font-weight: 600;
+	color: black;
+}
+
 /* --------------- Responsiveness --------------- */
 
 @media (min-width: 1140px) {
 	#faq-page .navbar-component {
 		gap: 50rem;
 	}
+	.topsolutions-container,
+	.accordion-wrapper {
+		max-width: 62rem;
+	}
 }
 
 @media (pointer: coarse), (max-width: 977px) {
+	#faq-page .category-section {
+		background-color: white;
+		padding: 0;
+		width: 100%;
+		justify-content: space-between;
+	}
+	section.bubblebackground .search-container,
+	.search-container div {
+		margin: 0;
+		width: 100%;
+	}
+	.search-container div,
+	.topsolutions-container {
+		max-width: 48rem;
+	}
+	section.bubblebackground .search-container h1 {
+		letter-spacing: -0.125rem;
+		padding: 1.5rem 0;
+	}
 	#faq-page .navbar-component {
 		gap: unset;
 		justify-content: space-between;
-	}
-	.topsolutions-container,
-	.accordion-wrapper {
-		max-width: 48rem;
 	}
 
 	.topsolutions-container {
@@ -152,7 +195,7 @@ section.bubblebackground {
 	}
 	.topsolutions {
 		width: fit-content;
-		margin: 0 1.25rem;
+		margin: 0;
 	}
 	.topsolutions .category__smallcaps {
 		display: none;
@@ -162,13 +205,9 @@ section.bubblebackground {
 	}
 }
 
-@media (pointer: coarse), (max-width: 768px) {
+@media (pointer: coarse), (max-width: 753px) {
 	section.bubblebackground .search-container h1 {
 		font-size: 3rem;
-	}
-	.topsolutions-container,
-	.accordion-wrapper {
-		max-width: 36rem;
 	}
 	section.bubblebackground {
 		background: url(https://support.scdn.co/web/_next/static/assets/9c300fb/search-mobile.webp)

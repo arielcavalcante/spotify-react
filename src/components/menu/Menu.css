@@ -42,7 +42,7 @@
 	display: block;
 }
 
-@media (pointer: coarse), (max-width: 768px) {
+@media (pointer: coarse), (max-width: 753px) {
 	.logo {
 		display: none;
 	}
@@ -67,5 +67,12 @@
 	}
 	.menu__link svg {
 		margin: 0 0 0.25rem 0;
+	}
+}
+
+@media (pointer: coarse), (max-width: 977px) {
+	#faq-page .logo {
+		height: 1.75rem;
+		padding: 0 1rem;
 	}
 }

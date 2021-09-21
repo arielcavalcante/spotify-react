@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Accordion, NavBar } from '../../components';
+import { Accordion, Button, NavBar } from '../../components';
 
 import './Faq.css';
 
@@ -96,6 +96,14 @@ export default function Faq() {
 			</section>
 			<section className='category-section'>
 				<Accordion list={list} />
+			</section>
+			<section className='comunity-section'>
+				<h1>Visite a Comunidade</h1>
+				<p>
+					Tem uma pergunta? Encontre respostas na nossa Comunidade de fãs
+					especialistas do mundo todo!
+				</p>
+				<Button text='Encontrar respostas' />
 			</section>
 		</main>
 	);
