@@ -1,0 +1,38 @@
+.accordion-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.accordion-component {
+	width: 17.75rem;
+	padding: 0 1rem;
+	margin-bottom: 1.25rem;
+	display: block;
+}
+
+h3.category__title {
+	font-size: 1.25rem;
+	font-weight: 900;
+	color: black;
+	padding: 1rem;
+}
+.accordion-component .accordion__list {
+	padding: 1rem 1rem 0;
+}
+
+@media (pointer: coarse), (max-width: 977px) {
+	.accordion-wrapper {
+		width: 100%;
+		flex-direction: column;
+	}
+	.accordion-component {
+		width: 100%;
+	}
+
+	.accordion__list.hide {
+		display: none;
+	}
+	.accordion__list.active {
+		display: block;
+	}
+}

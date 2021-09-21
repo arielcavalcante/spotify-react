@@ -21,7 +21,7 @@
 	font-weight: 500;
 	font-size: 0.875rem;
 }
-.section__link {
+.category__smallcaps {
 	color: #b3b3b3;
 	font-variant: small-caps;
 	font-weight: 600;
@@ -29,7 +29,7 @@
 }
 
 @media (pointer: coarse) {
-	.section__link {
+	.category__smallcaps {
 		display: none;
 	}
 }
