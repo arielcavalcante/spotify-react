@@ -9,4 +9,15 @@
 	border: none;
 	border-radius: 50rem;
 	display: block;
+	cursor: pointer;
+}
+
+.calltoaction:hover {
+	transform: scale(1.04);
+	background-color: #21e065;
+}
+
+.calltoaction:active {
+	transform: scale(1);
+	background-color: #169c46;
 }

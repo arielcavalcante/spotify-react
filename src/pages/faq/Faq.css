@@ -135,21 +135,28 @@ section.bubblebackground {
 
 .comunity-section {
 	background-color: white;
-	padding: 5rem 1rem;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5rem 1rem;
 	justify-content: space-between;
 }
 .comunity-section h1 {
 	color: black;
-	text-align: center;
+	font-weight: 900;
 	font-size: 3rem;
+	text-align: center;
 	padding-bottom: 2rem;
 }
 .comunity-section p {
 	font-size: 1.125rem;
-	text-align: center;
 	font-weight: 600;
+	text-align: center;
 	color: black;
+	max-width: 31.25rem;
+	margin-bottom: 1rem;
+	padding-bottom: 1.125rem;
 }
 
 /* --------------- Responsiveness --------------- */
@@ -164,6 +171,11 @@ section.bubblebackground {
 	}
 }
 
+@media (min-width: 978px) {
+	.comunity-section h1 {
+		font-size: 3rem;
+	}
+}
 @media (pointer: coarse), (max-width: 977px) {
 	#faq-page .category-section {
 		background-color: white;
@@ -202,6 +214,10 @@ section.bubblebackground {
 	}
 	.mobile.category__smallcaps {
 		display: block;
+	}
+	.comunity-section h1 {
+		font-size: 2.5rem;
+		padding-bottom: 1.625rem;
 	}
 }
 
