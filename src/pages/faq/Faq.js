@@ -72,6 +72,10 @@ export default function Faq() {
 				'Fornecedores',
 			],
 		},
+		{
+			title: 'links úteis',
+			li: ['Suporte', 'Player da Web', 'Aplicativo móvel grátis'],
+		},
 	];
 	return (
 		<>
