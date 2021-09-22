@@ -89,12 +89,23 @@ export default function Home() {
 		},
 	];
 
+	function shift() {
+		const hours = new Date().getHours();
+		if (hours >= 0 && hours < 12) {
+			return 'Bom dia';
+		} else if (hours >= 12 && hours < 18) {
+			return 'Boa tarde';
+		} else {
+			return 'Boa noite';
+		}
+	}
+
 	return (
 		<main id='home-page'>
 			<NavBar />
 			<div className='page-content'>
 				<Section
-					title='Boa noite'
+					title={shift()}
 					classprop='--card-alt'
 					cardlist={recentlyplayed}
 				></Section>
