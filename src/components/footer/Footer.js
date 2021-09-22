@@ -20,10 +20,10 @@ export default function Footer({ footerlist }) {
 							<h3 className='category__smallcaps'>{f.title}</h3>
 							<ul>
 								<li>
-									{footerlist.map((f, i) => {
+									{f.li.map((li, y) => {
 										return (
 											<Link className='menu__link' to='/faq'>
-												{f.li[i]}
+												{li}
 											</Link>
 										);
 									})}
