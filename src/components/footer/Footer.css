@@ -5,6 +5,9 @@
 .footer-component nav {
 	display: flex;
 }
+.footer-component .footer__menu {
+	display: flex;
+}
 .footer-component .col {
 	padding: 0 1rem;
 	display: flex;
@@ -21,22 +24,24 @@
 	padding: 0.375rem 0 1rem;
 	width: 100%;
 }
-.menu__link:hover {
-	color: #1ed760;
-}
 
 .col.socialmedia {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
 }
+.col.socialmedia ul {
+	display: flex;
+}
+.col.socialmedia ul li:not(:last-of-type) {
+	margin-right: 1rem;
+}
 .col.socialmedia a {
 	height: 2.75rem;
 	width: 2.75rem;
 	text-decoration: none;
 	background-color: #222326;
-	padding: 0.5rem;
-	margin-right: 1rem;
+	padding: 0.625rem;
 	border: none;
 	border-radius: 15rem;
 	box-shadow: none;
@@ -45,14 +50,89 @@
 .socialmedia a svg {
 	background-color: white;
 }
+.socialmedia a svg:hover {
+	background-color: #1ed760;
+}
 .socialmedia a svg path {
 	fill: #222326;
+}
+.footer-component .menu__link {
+	height: fit-content;
+	align-items: normal;
+}
+.footer__bottom-links {
+	display: flex;
+	align-items: center;
+}
+.footer__bottom-links ul {
+	display: flex;
+	gap: 1.5rem;
+}
+.footer__bottom-links > span {
+	margin-left: auto;
+}
+.footer__bottom-links li * {
+	padding: 0.75rem 0;
+}
+.country,
+.country a {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.country a svg {
+	height: 1rem;
+	fill: #b3b3b3;
+	margin-right: 0.5rem;
 }
 
 @media (pointer: coarse), (max-width: 977px) {
 	footer nav {
 		flex-wrap: wrap;
 	}
+	.footer-component {
+		padding: 3.125rem 0 1.25rem;
+	}
+	.footer-component nav {
+		flex-direction: column;
+		margin: 0 3.5rem;
+	}
+	.footer-component .footer__menu {
+		flex-basis: 18.75rem;
+	}
+	.footer-component .footer__menu .col {
+		flex-basis: 33%;
+	}
+	.footer-component .category__smallcaps {
+		margin: 3.125rem 0 1.375rem;
+	}
+	.footer-component .logo {
+		height: 1.75rem;
+		margin: 0;
+		padding: 0;
+	}
+	.col.socialmedia {
+		margin: 7.5rem 1rem 1rem;
+		padding: 0;
+	}
+	.col.socialmedia ul {
+		margin-top: 1.25rem;
+	}
 }
 @media (pointer: coarse), (max-width: 753px) {
+	.footer-component .footer__menu {
+		flex-direction: column;
+	}
+	.footer-component nav {
+		margin: 0;
+	}
+	.footer__bottom-links {
+		margin: 0 1rem;
+	}
+	.country > a {
+		padding: 0;
+	}
+	.footer__bottom-links > * {
+		padding: 0.625rem 0;
+	}
 }

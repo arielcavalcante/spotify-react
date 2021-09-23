@@ -1,0 +1,53 @@
+a {
+	text-decoration: none;
+}
+a:hover {
+	color: white;
+}
+.section__title {
+	font-size: 1.5rem;
+	line-height: 120%;
+}
+.section__subtitle {
+	color: #b3b3b3;
+	font-weight: 500;
+	font-size: 0.875rem;
+}
+.category__smallcaps {
+	color: #b3b3b3;
+	text-transform: uppercase;
+	font-variant: small-caps;
+	font-weight: 600;
+	text-decoration: none;
+}
+.type-tiny {
+	color: #b3b3b3;
+	font-size: 0.75rem;
+	text-decoration: none;
+}
+a.type-tiny:hover {
+	color: #1ed760;
+}
+.menu__link {
+	color: #b3b3b3;
+	text-decoration: none;
+	font-size: 0.875rem;
+	font-weight: 700;
+}
+.menu__link:hover {
+	color: #1ed760;
+}
+#home-page .menu__link:hover {
+	color: white;
+	fill: white;
+}
+.menu__link.active {
+	color: white;
+	background-color: #282828;
+}
+
+@media (pointer: coarse), (max-width: 753px) {
+	.type-tiny {
+		font-size: 0.625rem;
+	}
+}

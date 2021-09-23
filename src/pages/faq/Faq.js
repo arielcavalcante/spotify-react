@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Accordion, Button, Footer, NavBar } from '../../components';
 
 import './Faq.css';
+import '../../assets/typography/Typography.css';
 
 export default function Faq() {
 	const list = [
@@ -78,8 +79,8 @@ export default function Faq() {
 		},
 	];
 	return (
-		<>
-			<main id='faq-page'>
+		<div id='faq-page'>
+			<main>
 				<NavBar />
 				<section className='bubblebackground'>
 					<div className='search-container'>
@@ -127,6 +128,6 @@ export default function Faq() {
 				</section>
 			</main>
 			<Footer footerlist={footerlist} />
-		</>
+		</div>
 	);
 }

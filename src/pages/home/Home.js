@@ -2,6 +2,7 @@ import React from 'react';
 import { NavBar, Section } from '../../components';
 
 import './Home.css';
+import '../../assets/typography/Typography.css';
 
 export default function Home() {
 	const recentlyplayed = [
@@ -91,7 +92,7 @@ export default function Home() {
 
 	function shift() {
 		const hours = new Date().getHours();
-		if (hours >= 0 && hours < 12) {
+		if (hours >= 6 && hours < 12) {
 			return 'Bom dia';
 		} else if (hours >= 12 && hours < 18) {
 			return 'Boa tarde';

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 
 import './Footer.css';
-import { logo, ig, fb, tt } from '../../icons';
+import { country, logo, ig, fb, tt } from '../../icons';
 
 export default function Footer({ footerlist }) {
 	return (
@@ -35,9 +35,53 @@ export default function Footer({ footerlist }) {
 					})}
 				</div>
 				<div className='col socialmedia'>
-					<Link to='/faq'>{ig}</Link>
-					<Link to='/faq'>{tt}</Link>
-					<Link to='/faq'>{fb}</Link>
+					<ul>
+						<li>
+							<Link to='/faq'>{ig}</Link>
+						</li>
+						<li>
+							<Link to='/faq'>{tt}</Link>
+						</li>
+						<li>
+							<Link to='/faq'>{fb}</Link>
+						</li>
+					</ul>
+				</div>
+				<div className='footer__bottom-links country'>
+					<Link className='type-tiny' to='/faq'>
+						{country}
+						<span>Brasil</span>
+					</Link>
+				</div>
+				<div className='footer__bottom-links'>
+					<ul>
+						<li>
+							<Link className='type-tiny' to='/faq'>
+								Legal
+							</Link>
+						</li>
+						<li>
+							<Link className='type-tiny' to='/faq'>
+								Centro de Privacidade
+							</Link>
+						</li>
+						<li>
+							<Link className='type-tiny' to='/faq'>
+								Política de Privacidade
+							</Link>
+						</li>
+						<li>
+							<Link className='type-tiny' to='/faq'>
+								Cookies
+							</Link>
+						</li>
+						<li>
+							<Link className='type-tiny' to='/faq'>
+								Sobre anúncios
+							</Link>
+						</li>
+					</ul>
+					<span className='type-tiny'>© 2021 Spotify AB</span>
 				</div>
 			</nav>
 		</footer>
