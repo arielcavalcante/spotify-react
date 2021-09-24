@@ -47,41 +47,43 @@ export default function Footer({ footerlist }) {
 						</li>
 					</ul>
 				</div>
-				<div className='footer__bottom-links country'>
-					<Link className='type-tiny' to='/faq'>
-						{country}
-						<span>Brasil</span>
-					</Link>
-				</div>
-				<div className='footer__bottom-links'>
-					<ul>
-						<li>
-							<Link className='type-tiny' to='/faq'>
-								Legal
-							</Link>
-						</li>
-						<li>
-							<Link className='type-tiny' to='/faq'>
-								Centro de Privacidade
-							</Link>
-						</li>
-						<li>
-							<Link className='type-tiny' to='/faq'>
-								Política de Privacidade
-							</Link>
-						</li>
-						<li>
-							<Link className='type-tiny' to='/faq'>
-								Cookies
-							</Link>
-						</li>
-						<li>
-							<Link className='type-tiny' to='/faq'>
-								Sobre anúncios
-							</Link>
-						</li>
-					</ul>
-					<span className='type-tiny'>© 2021 Spotify AB</span>
+				<div className='footer__bottom'>
+					<div className='country'>
+						<Link className='type-tiny' to='/faq'>
+							{country}
+							<span>Brasil</span>
+						</Link>
+					</div>
+					<div className='links'>
+						<ul>
+							<li>
+								<Link className='type-tiny' to='/faq'>
+									Legal
+								</Link>
+							</li>
+							<li>
+								<Link className='type-tiny' to='/faq'>
+									Centro de Privacidade
+								</Link>
+							</li>
+							<li>
+								<Link className='type-tiny' to='/faq'>
+									Política de Privacidade
+								</Link>
+							</li>
+							<li>
+								<Link className='type-tiny' to='/faq'>
+									Cookies
+								</Link>
+							</li>
+							<li>
+								<Link className='type-tiny' to='/faq'>
+									Sobre anúncios
+								</Link>
+							</li>
+						</ul>
+						<span className='type-tiny'>© 2021 Spotify AB</span>
+					</div>
 				</div>
 			</nav>
 		</footer>
