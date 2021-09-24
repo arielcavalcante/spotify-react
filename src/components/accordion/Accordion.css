@@ -23,8 +23,20 @@
 	line-height: 2;
 	border-bottom: 0.0625rem solid #c1c3c6;
 }
-.category__title::after {
+.accordion-component.active + .accordion-component .category__title {
+	border-top: 0.0625rem solid #c1c3c6;
+}
+.accordion-component.hide > .category__title::after {
 	content: url('./chevron_down.svg');
+	height: 1rem;
+	width: 1rem;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 3;
+}
+.accordion-component.active > .category__title::after {
+	content: url('./chevron_up.svg');
 	height: 1rem;
 	width: 1rem;
 	position: absolute;
