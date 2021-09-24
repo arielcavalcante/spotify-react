@@ -32,7 +32,7 @@
 	display: block;
 }
 
-@media (pointer: coarse), (max-width: 753px) {
+@media (pointer: coarse), (max-width: 767px) {
 	#home-page .logo {
 		display: none;
 	}

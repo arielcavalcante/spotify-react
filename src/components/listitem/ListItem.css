@@ -1,9 +1,7 @@
-#faq-page .listitem-component .category__link {
+.listitem-component {
+	padding-top: 1rem;
+}
+.listitem-component .category__link {
 	color: #117a37;
 	font-weight: 800;
-}
-
-
-@media (pointer: coarse), (max-width: 977px) {
-
 }

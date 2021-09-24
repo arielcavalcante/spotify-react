@@ -12,7 +12,7 @@
 	z-index: 1;
 }
 
-@media (pointer: coarse), (max-width: 753px) {
+@media (pointer: coarse), (max-width: 767px) {
 	#home-page .navbar-component {
 		background-color: black;
 		height: 5rem;
@@ -24,7 +24,7 @@
 	}
 }
 
-@media (pointer: coarse), (max-width: 977px) {
+@media (pointer: coarse), (min-width: 768px) {
 	#faq-page nav.navbar-component {
 		height: 3.375rem;
 	}

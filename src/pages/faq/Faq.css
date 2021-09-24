@@ -6,7 +6,7 @@
 }
 #faq-page .navbar-component {
 	background-color: black;
-	height: 5rem;
+	height: 3.375rem;
 	width: 100%;
 	padding: 0;
 	margin: 0;
@@ -15,12 +15,14 @@
 	justify-content: space-between;
 	align-items: center;
 }
-#faq-page .logo {
+#faq-page .navbar-component .logo {
 	margin: 0%;
+	height: 1.625rem;
+	padding: 0 1rem;
 }
 #faq-page .menu__list {
 	display: flex;
-	align-items: center;
+	margin-right: 1rem;
 }
 #faq-page .menu__link {
 	height: 100%;
@@ -44,11 +46,11 @@ section.bubblebackground {
 	align-items: center;
 	justify-content: center;
 	padding: 0 0.5rem 1.5rem;
-	background: url(https://support.scdn.co/web/_next/static/assets/9c300fb/search-desktop.webp)
+	background: url(https://support.scdn.co/web/_next/static/assets/9c300fb/search-mobile.webp)
 		top/100% no-repeat #1c2963;
 }
 .search-container {
-	width: fit-content;
+	width: 100%;
 	margin: auto 1.25rem;
 	display: flex;
 	flex-direction: column;
@@ -58,24 +60,14 @@ section.bubblebackground {
 .search-container h1 {
 	font-size: 4rem;
 	text-align: center;
-	padding: 5rem 0 2.5rem;
+	line-height: 1.2;
+	padding: 1.5rem 0;
 }
-.search-container input {
-	appearance: none;
-	border: none;
-	border-color: none;
-	color: black;
-	font-size: 1rem;
-	width: 100%;
-	max-width: 46.5rem;
-	padding: 0.875rem 0.875rem 0.875rem 3rem;
-	border-radius: 0.375rem;
-	box-shadow: inset 0 0 0 1px #868686;
-	outline: 0;
+.search-container h1 {
+	font-size: 3rem;
 }
 .search-container div {
 	width: 100%;
-	margin: 0 0 1.5rem;
 	position: relative;
 }
 .search-container div::before {
@@ -83,27 +75,38 @@ section.bubblebackground {
 	height: 1.5rem;
 	width: 1.5rem;
 	position: absolute;
-	top: 0.75rem;
-	left: 0.75rem;
+	top: 0.67rem;
+	left: 1.0625rem;
 	z-index: 3;
 }
-.topsolutions-container {
-	text-align: center;
+.search-container input {
+	appearance: none;
+	border: none;
+	color: black;
+	font-size: 1rem;
 	width: 100%;
-	padding: 1.875rem 0 2.5rem;
+	padding: 0.875rem 0.875rem 0.875rem 3rem;
+	margin: 0 0 2rem;
+	border-radius: 0.375rem;
+	box-shadow: inset 0 0 0 1px #868686;
+	outline: 0;
+}
+.topsolutions-container {
+	width: 100%;
 	display: flex;
 	justify-content: center;
+	text-align: left;
+	flex-direction: column;
+	margin-bottom: -1rem;
 }
 .topsolutions {
 	width: 15.5rem;
-	margin: 0 1.25rem;
 }
 #faq-page .category__link {
-	font-size: 1.125rem;
+	font-size: 1.0625rem;
 	font-weight: 600;
 	text-decoration: none;
 	display: block;
-	margin: 0 0 1rem;
 	line-height: 1.5;
 }
 #faq-page .category__link:hover {
@@ -111,24 +114,17 @@ section.bubblebackground {
 }
 .topsolutions .category__smallcaps {
 	color: #d9d9d9;
-	font-size: 0.75rem;
 	margin: 1rem 0;
 	letter-spacing: 0.0625rem;
 	word-spacing: 0.125rem;
-}
-.mobile.category__smallcaps {
 	display: none;
 }
 
-/* --------------- Questions Section --------------- */
-
-.category-section {
-	background-color: #eee;
-	padding: 1.875rem 0 1.25rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.mobile.category__smallcaps {
+	display: block;
 }
+/* Accordion settings must be done in their component.
+Except styles overrides. */
 
 /* --------------- Comunity Section --------------- */
 
@@ -144,7 +140,7 @@ section.bubblebackground {
 .comunity-section h1 {
 	color: black;
 	font-weight: 900;
-	font-size: 3rem;
+	font-size: 2.5rem;
 	text-align: center;
 	padding-bottom: 2rem;
 }
@@ -159,34 +155,27 @@ section.bubblebackground {
 }
 
 /* --------------- Responsiveness --------------- */
-
-@media (min-width: 1140px) {
-	#faq-page .navbar-component {
-		gap: 50rem;
-	}
-	.topsolutions-container,
-	.accordion-wrapper {
-		max-width: 62rem;
-	}
-}
-
-@media (min-width: 978px) {
-	.comunity-section h1 {
-		font-size: 3rem;
-	}
-}
-@media (pointer: coarse), (max-width: 977px) {
+@media (pointer: coarse), (min-width: 768px) {
 	#faq-page .navbar-component .logo {
-		height: 1.75rem;
 		padding: 0 1rem;
 	}
-	#faq-page .category-section {
+	#faq-page .menu__list {
+		margin: 0;
+	}
+	.search-container h1 {
+		font-size: 4rem;
+	}
+	.category-section {
 		background-color: white;
 		padding: 0;
 		width: 100%;
 		justify-content: space-between;
 	}
-	section.bubblebackground .search-container,
+	section.bubblebackground {
+		background: url(https://support.scdn.co/web/_next/static/assets/9c300fb/search-desktop.webp)
+			top/100% no-repeat #1c2963;
+	}
+	.search-container,
 	.search-container div {
 		margin: 0;
 		width: 100%;
@@ -195,41 +184,59 @@ section.bubblebackground {
 	.topsolutions-container {
 		max-width: 48rem;
 	}
-	section.bubblebackground .search-container h1 {
+	.search-container h1 {
 		letter-spacing: -0.125rem;
-		padding: 1.5rem 0;
+
+		padding: 5rem 0 2.5rem;
 	}
 	#faq-page .navbar-component {
 		gap: unset;
 		justify-content: space-between;
 	}
 
-	.topsolutions-container {
-		text-align: left;
-		flex-direction: column;
-	}
-	.topsolutions {
-		width: fit-content;
-		margin: 0;
-	}
-	.topsolutions .category__smallcaps {
-		display: none;
-	}
-	.mobile.category__smallcaps {
-		display: block;
-	}
 	.comunity-section h1 {
-		font-size: 2.5rem;
+		font-size: 3rem;
 		padding-bottom: 1.625rem;
 	}
 }
+@media (min-width: 1024px) {
+	#faq-page .navbar-component {
+		height: 5rem;
+	}
 
-@media (pointer: coarse), (max-width: 753px) {
-	section.bubblebackground .search-container h1 {
+	section.bubblebackground {
+		align-items: center;
+	}
+	.topsolutions-container {
+		padding: 1.875rem 0 2.5rem;
+		text-align: center;
+		flex-direction: row;
+	}
+	.topsolutions {
+		flex-basis: 25%;
+	}
+	.topsolutions-container,
+	.accordion-wrapper {
+		max-width: 62rem;
+	}
+	.comunity-section h1 {
 		font-size: 3rem;
 	}
-	section.bubblebackground {
-		background: url(https://support.scdn.co/web/_next/static/assets/9c300fb/search-mobile.webp)
-			top/100% no-repeat #1c2963;
+	.category-section {
+		background-color: #eee;
+		padding: 1.875rem 0 1.25rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.topsolutions .category__smallcaps {
+		display: block;
+	}
+	.mobile.category__smallcaps {
+		display: none;
+	}
+	#faq-page .navbar-component {
+		justify-content: center;
+		gap: 42rem;
 	}
 }

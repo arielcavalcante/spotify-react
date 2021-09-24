@@ -15,23 +15,17 @@ a:hover {
 }
 .category__smallcaps {
 	color: #b3b3b3;
+	font-size: 0.75rem;
 	text-transform: uppercase;
 	font-variant: small-caps;
 	font-weight: 600;
 	text-decoration: none;
 }
-.type-tiny {
-	color: #b3b3b3;
-	font-size: 0.75rem;
-	text-decoration: none;
-}
-a.type-tiny:hover {
-	color: #1ed760;
-}
+
 .menu__link {
 	color: #b3b3b3;
 	text-decoration: none;
-	font-size: 0.875rem;
+	font-size: 1rem;
 	font-weight: 700;
 }
 .menu__link:hover {
@@ -45,9 +39,16 @@ a.type-tiny:hover {
 	color: white;
 	background-color: #282828;
 }
-
-@media (pointer: coarse), (max-width: 753px) {
+.type-tiny {
+	color: #b3b3b3;
+	font-size: 0.625rem;
+	text-decoration: none;
+}
+a.type-tiny.green:hover {
+	color: #1ed760;
+}
+@media (pointer: coarse), (min-width: 767px) {
 	.type-tiny {
-		font-size: 0.625rem;
+		font-size: 0.75rem;
 	}
 }

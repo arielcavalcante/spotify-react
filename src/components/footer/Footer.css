@@ -1,12 +1,21 @@
 .footer-component {
 	background-color: black;
-	padding: 5rem 3.125rem;
 }
 .footer-component nav {
 	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	padding: 3.125rem 0 1.25rem;
 }
-.footer-component .footer__menu {
+.footer-component .logo {
+	height: 1.75rem;
+	margin: 0;
+	padding: 0;
+}
+.footer__menu {
 	display: flex;
+	flex-direction: column;
+	flex-basis: 18.75rem;
 }
 .footer-component .col {
 	padding: 0 1rem;
@@ -14,29 +23,33 @@
 	flex-direction: column;
 	justify-content: flex-start;
 }
-.footer-component h3 {
+.footer__menu .col {
+	flex-basis: 33%;
+}
+.col .category__smallcaps {
 	font-size: 0.75rem;
 	margin: 1.25rem 0;
+	margin: 3.125rem 0 1.375rem;
 }
 .footer-component .menu__link {
+	width: 100%;
+	height: fit-content;
 	color: white;
 	font-size: 1rem;
 	padding: 0.375rem 0 1rem;
-	width: 100%;
 }
-
-.col.socialmedia {
+.socialmedia {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
+	margin: 2.5rem 0 1rem;
 }
-.col.socialmedia ul {
+.socialmedia ul {
 	display: flex;
+	margin-top: 1.25rem;
+	gap: 1rem;
 }
-.col.socialmedia ul li:not(:last-of-type) {
-	margin-right: 1rem;
-}
-.col.socialmedia a {
+.socialmedia a {
 	height: 2.75rem;
 	width: 2.75rem;
 	text-decoration: none;
@@ -56,83 +69,99 @@
 .socialmedia a svg path {
 	fill: #222326;
 }
-.footer-component .menu__link {
-	height: fit-content;
-	align-items: normal;
+.footer__bottom > div {
+	margin: 0 1rem;
 }
-.footer__bottom-links {
+.footer__bottom .links {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
+	gap: 3rem;
 }
-.footer__bottom-links ul {
+.footer__bottom .links > * {
+	padding: 0.625rem 0;
+}
+.footer__bottom .links ul {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 1.5rem;
 }
-.footer__bottom-links > span {
+.footer__bottom .links > span {
 	margin-left: auto;
+	white-space: nowrap;
 }
-.footer__bottom-links li * {
+.footer__bottom .links li > *,
+.footer__bottom .links > span {
 	padding: 0.75rem 0;
 }
-.country,
-.country a {
+.footer__bottom .country,
+.footer__bottom .country a {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 }
-.country a svg {
+.footer__bottom .country a svg {
 	height: 1rem;
 	fill: #b3b3b3;
 	margin-right: 0.5rem;
 }
 
-@media (pointer: coarse), (max-width: 977px) {
-	footer nav {
-		flex-wrap: wrap;
-	}
-	.footer-component {
-		padding: 3.125rem 0 1.25rem;
+/* --------------- Responsiveness --------------- */
+
+.footer__bottom .country > a {
+	padding: 0;
+}
+
+@media (pointer: coarse), (min-width: 768px) {
+	.footer__menu {
+		flex-direction: row;
 	}
 	.footer-component nav {
-		flex-direction: column;
 		margin: 0 3.5rem;
 	}
-	.footer-component .footer__menu {
-		flex-basis: 18.75rem;
-	}
-	.footer-component .footer__menu .col {
-		flex-basis: 33%;
-	}
-	.footer-component .category__smallcaps {
-		margin: 3.125rem 0 1.375rem;
-	}
-	.footer-component .logo {
-		height: 1.75rem;
-		margin: 0;
-		padding: 0;
-	}
-	.col.socialmedia {
-		margin: 7.5rem 1rem 1rem;
-		padding: 0;
-	}
-	.col.socialmedia ul {
-		margin-top: 1.25rem;
+	.footer__bottom .links {
+		align-items: center;
 	}
 }
-@media (pointer: coarse), (max-width: 753px) {
-	.footer-component .footer__menu {
-		flex-direction: column;
+
+@media (min-width: 1024px) {
+	.footer-component {
+		display: flex;
+		padding: 5rem 0 3.125rem;
+		justify-content: center;
 	}
 	.footer-component nav {
+		padding: 0;
+		margin: 0 1.875rem;
+		flex-direction: row;
+		max-width: 71.125rem;
+	}
+	.footer-component .col:first-of-type {
+		min-height: 21.625rem;
+	}
+	.col {
+		padding: 0 1rem;
+	}
+	.footer-component .category__smallcaps {
+		padding: 1rem 0;
+	}
+	.footer-component .socialmedia a {
+		height: 3.375rem;
+		width: 3.375rem;
+		padding: 1rem;
+	}
+	.footer__menu {
+		flex-basis: 50%;
+	}
+	.footer-component .category__smallcaps,
+	.socialmedia,
+	.socialmedia ul {
 		margin: 0;
 	}
-	.footer__bottom-links {
-		margin: 0 1rem;
+	.footer-component .socialmedia {
+		margin-left: auto;
+		justify-self: flex-end;
 	}
-	.country > a {
-		padding: 0;
-	}
-	.footer__bottom-links > * {
-		padding: 0.625rem 0;
+	.footer__bottom {
+		flex-basis: 100%;
 	}
 }
