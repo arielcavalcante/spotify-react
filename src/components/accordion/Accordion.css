@@ -18,7 +18,7 @@
 	font-weight: 900;
 	color: black;
 	padding: 1rem;
-	height: 3.8125rem;
+	height: 4.125rem;
 	cursor: pointer;
 	line-height: 2;
 	border-bottom: 0.0625rem solid #c1c3c6;
@@ -56,7 +56,7 @@
 }
 @media (min-width: 768px) {
 	.category__title {
-		font-size: 1.25rem;
+		font-size: 1.325rem;
 		line-height: 1.3;
 	}
 }

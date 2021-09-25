@@ -45,7 +45,7 @@ section.bubblebackground {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 0 0.5rem 1.5rem;
+	padding: 0 0.5rem 4.5rem;
 	background: url(https://support.scdn.co/web/_next/static/assets/9c300fb/search-mobile.webp)
 		top/100% no-repeat #1c2963;
 }
@@ -61,7 +61,7 @@ section.bubblebackground {
 	font-size: 4rem;
 	text-align: center;
 	line-height: 1.2;
-	padding: 1.5rem 0;
+	padding: 1.35rem 0;
 }
 .search-container h1 {
 	font-size: 3rem;
@@ -97,10 +97,7 @@ section.bubblebackground {
 	justify-content: center;
 	text-align: left;
 	flex-direction: column;
-	margin-bottom: -1rem;
-}
-.topsolutions {
-	width: 15.5rem;
+	margin-bottom: -0.75rem;
 }
 #faq-page .category__link {
 	font-size: 1.0625rem;
@@ -134,24 +131,25 @@ Except styles overrides. */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 5rem 1rem;
+	padding: 4rem 1rem;
 	justify-content: space-between;
 }
 .comunity-section h1 {
 	color: black;
 	font-weight: 900;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	text-align: center;
 	padding-bottom: 2rem;
 }
 .comunity-section p {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	font-weight: 600;
 	text-align: center;
 	color: black;
 	max-width: 31.25rem;
 	margin-bottom: 1rem;
 	padding-bottom: 1.125rem;
+	line-height: 1.35;
 }
 
 /* --------------- Responsiveness --------------- */
@@ -193,17 +191,28 @@ Except styles overrides. */
 		gap: unset;
 		justify-content: space-between;
 	}
-
+	.comunity-section {
+		padding: 4.5rem 1rem;
+	}
 	.comunity-section h1 {
-		font-size: 3rem;
-		padding-bottom: 1.625rem;
+		font-size: 2.5rem;
+		padding-bottom: 2rem;
+	}
+	.comunity-section p {
+		margin-bottom: 1.25rem;
 	}
 }
+
+/* ========================== */
+/* ========================== */
+/* ========== 1024 ========== */
+/* ========================== */
+/* ========================== */
+
 @media (min-width: 1024px) {
 	#faq-page .navbar-component {
 		height: 5rem;
 	}
-
 	section.bubblebackground {
 		align-items: center;
 	}
@@ -228,6 +237,9 @@ Except styles overrides. */
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+	.topsolutions {
+		width: 15.5rem;
 	}
 	.topsolutions .category__smallcaps {
 		display: block;
