@@ -93,23 +93,25 @@ export default function Faq() {
 						<div className='topsolutions'>
 							<h3 className='mobile category__smallcaps'> MELHORES SOLUÇÕES</h3>
 							<h3 className='category__smallcaps'>AJUDA COM A COBRANÇA</h3>
-							<Link className='category__link'>Atualizações de preço</Link>
+							<Link className='category__link' to='/faq'>
+								Atualizações de preço
+							</Link>
 						</div>
 						<div className='topsolutions'>
 							<h3 className='category__smallcaps'>PLANOS DISPONÍVEIS</h3>
-							<Link className='category__link'>
+							<Link className='category__link' to='/faq'>
 								Criar ou entrar em um plano Família
 							</Link>
 						</div>
 						<div className='topsolutions'>
 							<h3 className='category__smallcaps'>AJUDA COM A COBRANÇA</h3>
-							<Link className='category__link'>
+							<Link className='category__link' to='/faq'>
 								Ajuda com pagamento não efetuado
 							</Link>
 						</div>
 						<div className='topsolutions'>
 							<h3 className='category__smallcaps'>FAZENDO LOGIN</h3>
-							<Link className='category__link'>
+							<Link className='category__link' to='/faq'>
 								Não consigo redefinir a senha
 							</Link>
 						</div>
