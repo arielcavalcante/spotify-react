@@ -2,9 +2,9 @@ import React from 'react'
 
 import './Button.css'
 
-export default function Button({text}) {
+export default function Button({text, color='black-text'}) {
   return (
-    <button className='calltoaction'>
+    <button className={`calltoaction ${color}`}>
       {text}
     </button>
   )
