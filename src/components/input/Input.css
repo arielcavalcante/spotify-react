@@ -1,10 +1,12 @@
 .custom-input{
     padding: 12px 20px;
-    margin: 8px 0 12px;
     box-sizing: border-box;
     border: 2px solid #f1f1f1;
     border-radius: 3px;
     color: #343434;
+}
+.input-container{
+    margin: 8px 0 12px;
 }
 .w-full{
     width: 100%;
@@ -30,4 +32,8 @@ label{
     color: #000;
     opacity: 0.3;
     font-weight: 800;
+}
+.input-container span{
+    color: #f94343;
+    font-size: 0.9em;
 }

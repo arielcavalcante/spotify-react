@@ -2,10 +2,11 @@ import React, {useState} from 'react';
 import { v4 as uuid } from 'uuid';
 import './InputSelect.css';
 
-export default function InputSelect({options = [], name}) {
+export default function InputSelect({options = [], onChange, name}) {
 	const [selected, setSelected] = useState("");
 	const handleChange = (ev) => {
 		setSelected(ev.target.value);
+		onChange(ev.target.value)
 	}
 	return (
 		<div>
