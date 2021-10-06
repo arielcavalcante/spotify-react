@@ -1,0 +1,27 @@
+[class^='songlist-component'] {
+	display: flex;
+	flex-direction: column;
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+.hide-scrollbar {
+	overflow-x: scroll;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+	display: none;
+	background: transparent;
+	width: 0;
+}
+
+.songlist-component--card-alt {
+	height: 5rem;
+}
+
+/* @media only screen and (min-width: 768px) {
+	.songlist-component {
+		height: 18rem;
+		flex-wrap: wrap;
+	}
+} */

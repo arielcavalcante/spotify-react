@@ -1,0 +1,13 @@
+#playlist-page {
+	position: relative;
+}
+#playlist-page .page-content {
+	position: fixed;
+	width: calc(100vw - 16rem);
+}
+#playlist-page .section-component {
+	overflow-y: scroll;
+}
+/* #playlist-page .section-component .section__header {
+	display: none;
+} */
