@@ -14,6 +14,7 @@ export default function NavBar({ title }) {
 			<Menu
 				list={[
 					{ icon: home, title: 'Início', link: '/' },
+					{ icon: faq, title: 'Cadastrar', link: '/signup' },
 					{ icon: faq, title: 'Faq', link: '/faq' },
 				]}
 			/>

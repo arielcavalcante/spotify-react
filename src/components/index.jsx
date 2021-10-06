@@ -7,6 +7,8 @@ import ListItem from './listitem/ListItem';
 import Menu from './menu/Menu';
 import NavBar from './navbar/NavBar';
 import Section from './section/Section';
+import Input from './input/Input';
+import InputSelect from './inputSelect/InputSelect';
 
 export {
 	Accordion,
@@ -18,4 +20,6 @@ export {
 	Menu,
 	NavBar,
 	Section,
+	Input,
+	InputSelect
 };

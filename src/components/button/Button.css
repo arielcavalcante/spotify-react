@@ -1,5 +1,4 @@
 .calltoaction {
-	color: black;
 	font-weight: 800;
 	font-size: 0.875rem;
 	line-height: 1.5;
@@ -10,8 +9,17 @@
 	border-radius: 50rem;
 	display: block;
 	cursor: pointer;
+	letter-spacing: 0.1rem;
 }
-
+.black-text{
+	color: black;
+}
+.disabled{
+	opacity: 0.5;
+}
+.white-text{
+	color: white;
+}
 .calltoaction:hover {
 	transform: scale(1.04);
 	background-color: #21e065;

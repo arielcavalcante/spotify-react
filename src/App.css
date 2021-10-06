@@ -34,3 +34,41 @@ ul {
 ul li {
 	list-style-type: none;
 }
+/* margin */
+.m-12{
+	margin: 12px;
+}
+.m-12{
+	margin: 12px;
+}
+
+/* padding */
+.p-12{
+	padding: 12px;
+}
+.pr-5{
+	padding-right: 5px;
+}
+.pl-5{
+	padding-left: 5px;
+}
+.pr-12{
+	padding-right: 12px;
+}
+.pl-12{
+	padding-left: 12px;
+}
+
+/* flex */
+.flex{
+	display: flex;
+}
+.space-around{
+	justify-content: space-around;
+}
+.space-between{
+	justify-content: space-between;
+}
+.align-items-center{
+	align-items: center;
+}
