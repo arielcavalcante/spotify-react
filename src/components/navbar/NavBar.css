@@ -15,7 +15,6 @@
 
 /* _________________________________________________ */
 /* ------------------ ALT VERSION ------------------ */
-
 .navbar-component--alt {
 	background-color: black;
 	height: 3.375rem;
@@ -32,28 +31,27 @@
 	height: 1.625rem;
 	padding: 0 1rem;
 }
-.navbar-component--alt .menu__list {
+
+.navbar-component--alt .menu-component .menu__list {
 	display: flex;
 	margin-right: 1rem;
 }
-.navbar-component--alt .menu__link {
+.navbar-component--alt .menu-component .menu__link {
 	height: 100%;
 	width: fit-content;
 	background-color: unset;
 	color: white;
 }
-.navbar-component--alt .menu__link:hover {
+.navbar-component--alt .menu-component .menu__link:hover {
 	color: #1ed760;
 }
-.navbar-component--alt .menu__link .home,
-.navbar-component--alt .menu__link .faq {
+.navbar-component--alt .menu-component .menu__link svg {
 	display: none;
 }
-
 /* ------------------ ALT VERSION ------------------ */
 /* _________________________________________________ */
 
-@media (pointer: coarse), (min-width: 768px) {
+@media (min-width: 768px) {
 	.navbar-component {
 		background-color: black;
 		width: 16.5rem;
@@ -63,7 +61,7 @@
 	}
 }
 
-@media (pointer: coarse), (max-width: 767px) {
+@media (max-width: 767px) {
 	#home-page .navbar-component,
 	#listplaylist-page .navbar-component {
 		background-color: black;

@@ -1,8 +1,7 @@
 [class^='songlist-component'] {
 	display: flex;
 	flex-direction: column;
-	overflow-y: hidden;
-	overflow-x: auto;
+	overflow: hidden;
 }
 .hide-scrollbar {
 	overflow-x: scroll;
@@ -18,6 +17,7 @@
 .songlist-component--card-alt {
 	height: 5rem;
 }
+
 
 /* @media only screen and (min-width: 768px) {
 	.songlist-component {

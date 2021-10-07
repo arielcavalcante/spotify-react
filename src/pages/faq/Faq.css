@@ -4,24 +4,6 @@
 	display: block;
 }
 
-#faq-page .menu__list {
-	display: flex;
-	margin-right: 1rem;
-}
-#faq-page .menu__link {
-	height: 100%;
-	width: fit-content;
-	background-color: unset;
-	color: white;
-}
-#faq-page .menu__link:hover {
-	color: #1ed760;
-}
-#faq-page .menu__link .home,
-#faq-page .menu__link .faq {
-	display: none;
-}
-
 /* --------------- Banner and Search --------------- */
 
 section.bubblebackground {
@@ -137,7 +119,7 @@ Except styles overrides. */
 }
 
 /* --------------- Responsiveness --------------- */
-@media (pointer: coarse), (min-width: 768px) {
+@media (min-width: 768px) {
 	#faq-page .navbar-component .logo {
 		padding: 0 1rem;
 	}

@@ -35,7 +35,7 @@
 	display: block;
 }
 
-@media (pointer: coarse), (max-width: 767px) {
+@media (max-width: 767px) {
 	.menu__list {
 		display: flex;
 		align-items: center;
