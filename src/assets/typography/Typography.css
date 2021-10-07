@@ -37,7 +37,6 @@ a:hover {
 }
 .menu__link.active {
 	color: white;
-	background-color: #282828;
 }
 .type-tiny {
 	color: #b3b3b3;

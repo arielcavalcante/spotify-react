@@ -4,33 +4,43 @@ const playlists = [
 		subtitle:
 			'From Fela Kuti to Antibalas, enjoy a collection of timeless Afrobeat music!',
 		type: 'playlist',
-		link: 'playlist/afrobeat-essentials',
+		link: 'afrobeat-essentials',
+		playlist: 'afrobeatessentials',
+		owner: 'spotify',
 	},
 	{
 		title: 'PRIDE Orgulho Tropical',
 		subtitle:
 			'Sucessos e novidades de artistas Brasileires LGBTQ+ que nos enchem de orgulho! Foto: MEL',
 		type: 'playlist',
-		link: 'playlist/pride-orgulho-tropical',
+		link: 'orgulho-tropical',
+		playlist: 'orgulhotropical',
+		owner: 'spotify',
 	},
 	{
 		title: 'Brega Funk',
 		subtitle:
 			'Os grandes hinos da união do Brega com o Funk. Foto: Ruivinha de Marte.',
 		type: 'playlist',
-		link: 'playlist/brega-funk',
+		link: 'brega-funk',
+		playlist: 'bregafunk',
+		owner: 'spotify',
 	},
 	{
 		title: 'Frevo & Folia',
 		subtitle: 'De Spotify',
 		type: 'playlist',
-		link: 'playlist/frevo-folia',
+		link: 'frevo-folia',
+		playlist: 'frevofolia',
+		owner: 'spotify',
 	},
 	{
 		title: 'Equal Brasil',
 		subtitle: 'Liniker e mais mulheres para serem ouvidas no máximo volume.',
 		type: 'playlist',
-		link: 'playlist/equal-brasil',
+		link: 'equal-brasil',
+		playlist: 'equalbrasil',
+		owner: 'spotify',
 	},
 ];
 const recentlyplayed = [

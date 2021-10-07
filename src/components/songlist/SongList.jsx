@@ -6,7 +6,7 @@ import './SongList.css';
 
 export default function SongList({
 	alt,
-	songlist,
+	songs,
 	classprop,
 	link,
 	source,
@@ -16,7 +16,7 @@ export default function SongList({
 }) {
 	return (
 		<div className={`songlist-component${classprop || ''}`}>
-			{songlist.map((c, i) => {
+			{songs.map((c, i) => {
 				return <Song key={uuid()} classprop={classprop} {...c} />;
 			})}
 		</div>

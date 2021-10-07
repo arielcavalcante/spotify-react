@@ -14,6 +14,9 @@
 	align-items: center;
 	border-radius: 0.25rem;
 }
+.menu__link.active {
+	background-color: #282828;
+}
 .menu__link svg {
 	fill: #b3b3b3;
 	height: 1.5rem;
@@ -33,9 +36,6 @@
 }
 
 @media (pointer: coarse), (max-width: 767px) {
-	#home-page .logo {
-		display: none;
-	}
 	.menu__list {
 		display: flex;
 		align-items: center;
@@ -57,5 +57,12 @@
 	}
 	.menu__link svg {
 		margin: 0 0 0.25rem 0;
+	}
+
+	.navbar-component .logo {
+		display: none;
+	}
+	#faq-page .navbar-component .logo {
+		display: block;
 	}
 }

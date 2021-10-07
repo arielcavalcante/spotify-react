@@ -81,12 +81,16 @@ export default function Faq() {
 	return (
 		<div id='faq-page'>
 			<main>
-				<NavBar />
+				<NavBar classprop='--alt' />
 				<section className='bubblebackground'>
 					<div className='search-container'>
 						<h1>Como podemos ajudar?</h1>
 						<div>
-							<input type='search' placeholder='Buscar' />
+							<input
+								aria-label='Search for questions here'
+								type='search'
+								placeholder='Buscar'
+							/>
 						</div>
 					</div>
 					<div className='topsolutions-container'>

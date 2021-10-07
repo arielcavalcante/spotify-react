@@ -1,10 +1,15 @@
 import React from 'react';
-import { PlaylistTemplate } from '../../templates';
+import { useParams } from 'react-router-dom';
 
-export default function Playlist({ songlist }) {
+import { PlayListTemplate } from '../../templates';
+
+import './PlayList.css';
+
+export default function PlayList() {
+	const { link } = useParams();
 	return (
-		<div>
-			<PlaylistTemplate songlist={songlist} />
-		</div>
+		<>
+			<PlayListTemplate songs={link} />
+		</>
 	);
 }

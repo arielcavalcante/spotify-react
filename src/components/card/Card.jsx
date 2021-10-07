@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import './Card.css';
 
 export default function Card({
@@ -13,7 +14,11 @@ export default function Card({
 }) {
 	return (
 		<div className={`card-component${classprop || ''}`}>
-			<Link to={link || '/'} type={type || 'Álbum'} className='card__clickarea'>
+			<Link
+				to={`${link}` || '/'}
+				type={type || 'Álbum'}
+				className='card__clickarea'
+			>
 				<figure className='card__thumbnail'>
 					<img
 						className={type}

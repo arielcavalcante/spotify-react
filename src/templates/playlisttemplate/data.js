@@ -1,4 +1,4 @@
-const songlist = [
+const orgulhotropical = [
 	{
 		id: '',
 		title: 'Mutante',
@@ -38,7 +38,7 @@ const songlist = [
 	},
 	{
 		id: '',
-		title: 'Bom Mesmo É Estar Debaixo D\'Água',
+		title: "Bom Mesmo É Estar Debaixo D'Água",
 		artist: 'Luedji Luna',
 		duration: '4:31',
 	},
@@ -75,12 +75,8 @@ const songlist = [
 	// 	duration: '',
 	// },
 ];
+orgulhotropical.map((song, i) => {
+	return (song.id = i + 1);
+});
 
-function idNumber() {
-	for (let i = 0; i < songlist.length; i++) {
-		songlist[i].id = i + 1;
-	}
-}
-idNumber();
-
-export { songlist };
+export { orgulhotropical };

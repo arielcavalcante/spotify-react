@@ -5,9 +5,9 @@ import { Menu } from '../';
 import './NavBar.css';
 import { home, faq, logo } from '../../icons';
 
-export default function NavBar({ title }) {
+export default function NavBar({ classprop, title }) {
 	return (
-		<nav className='navbar-component'>
+		<nav className={`navbar-component${classprop || ''}`}>
 			<Link className='logo' to='/'>
 				{logo}
 			</Link>

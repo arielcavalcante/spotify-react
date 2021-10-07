@@ -1,3 +1,3 @@
-import PlaylistTemplate from './playlist/PlaylistTemplate';
+import PlayListTemplate from './playlisttemplate/PlayListTemplate';
 
-export { PlaylistTemplate };
+export { PlayListTemplate };

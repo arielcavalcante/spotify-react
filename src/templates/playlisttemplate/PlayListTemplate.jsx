@@ -2,15 +2,17 @@ import React from 'react';
 
 import { NavBar, Section, SongList } from '../../components';
 
-import './PlaylistTemplate.css';
+import './PlayListTemplate.css';
 
-export default function Playlist({ songlist }) {
+import { orgulhotropical } from './data';
+
+export default function PlayListTemplate({ songs, title }) {
 	return (
 		<div id='playlist-page'>
 			<NavBar />
 			<main className='page-content'>
-				<Section classprop=' hide'>
-					<SongList songlist={songlist} />
+				<Section title={title}>
+					<SongList songs={orgulhotropical} />
 				</Section>
 			</main>
 		</div>

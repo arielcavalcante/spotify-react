@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavBar, Section } from '../../components';
+
+import { CardList, NavBar, Section } from '../../components';
 
 import './Home.css';
 import '../../assets/typography/Typography.css';
@@ -22,18 +23,21 @@ export default function Home() {
 		<main id='home-page'>
 			<NavBar />
 			<div className='page-content'>
-				<Section
-					title={shift()}
-					classprop='--card-alt'
-					cardlist={recentlyplayed}
-				></Section>
-				<Section title='Suas playlists' cardlist={playlists}></Section>
-				<Section title='Seus programas' cardlist={podcasts}></Section>
-				<Section
-					cardlist={dailymixes}
-					title='Feitos pra você'
-					subtitle='Quanto mais você escutar, melhores recomendações vai receber.'
-				></Section>
+				<Section title={shift()}>
+					<CardList classprop='--card-alt' cards={recentlyplayed} />
+				</Section>
+				<Section title='Suas playlists' link='playlists'>
+					<CardList cards={playlists} />
+				</Section>
+				<Section title='Seus programas'>
+					<CardList link='playlists' cards={podcasts} />
+				</Section>
+				<Section title='Feitos pra você'>
+					<CardList
+						cards={dailymixes}
+						subtitle='Quanto mais você escutar, melhores recomendações vai receber.'
+					/>
+				</Section>
 			</div>
 		</main>
 	);
