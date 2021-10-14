@@ -1,7 +1,8 @@
 import Home from './home/Home';
 import Faq from './faq/Faq';
-import ListPlayList from './listplaylist/ListPlayList';
-import PlayList from './playlist/PlayList';
+import PlaylistCollection from './playlistcollection/PlaylistCollection';
+
+import Playlist from './playlist/Playlist';
 import Signup from './signup/Signup';
 
-export { Home, Faq, ListPlayList, PlayList, Signup };
+export { Home, Faq, PlaylistCollection, Playlist, Signup };

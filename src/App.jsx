@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import { Home, Faq, ListPlayList, PlayList, Signup } from './pages';
+import { Home, Faq, PlaylistCollection, Playlist, Signup } from './pages';
 import './App.css';
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
 					<Route path='/' exact component={Home} />
 					<Route path='/faq' component={Faq} />
 					<Route path='/signup' component={Signup} />
-					<Route path='/playlists' component={ListPlayList} />
-					<Route path='/:link' component={PlayList} />
+					<Route path='/playlists' component={PlaylistCollection} />
+					<Route path='/:link' component={Playlist} />
 				</Switch>
 			</Router>
 		</div>

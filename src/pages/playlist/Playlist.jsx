@@ -3,9 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import { PlayListTemplate } from '../../templates';
 
-import './PlayList.css';
-
-export default function PlayList() {
+export default function Playlist() {
 	const { link } = useParams();
 	return (
 		<>
