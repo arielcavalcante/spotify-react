@@ -33,20 +33,23 @@ export default function Signup() {
 		'Novembro',
 	];
 	const handleChange = (field, newValue) => {
-		setForm({ ...form, [field]: newValue });
-	};
-	const handleSubmit = ev => {
-		ev.preventDefault();
+		setForm({...form, [field]:newValue})
+	}
+	const handleSubmit = (ev) => {
+		ev.preventDefault()
+		setForm(formDefault);
 
-		// Salvar no mock
-		console.log(form);
-	};
-	function checkEmails() {
-		if (
-			form.email !== form.email_confirm &&
-			form.email !== '' &&
-			form.email_confirm !== ''
-		) {
+		download(JSON.stringify(form), 'json.txt', 'text/plain');
+	}
+	function download(content, fileName, contentType) {
+		var a = document.createElement("a");
+		var file = new Blob([content], {type: contentType});
+		a.href = URL.createObjectURL(file);
+		a.download = fileName;
+		a.click();
+	}
+	function checkEmails(){
+		if((form.email !== form.email_confirm) && (form.email !== "" && form.email_confirm !== "")){
 			setEmailValid(false);
 		} else {
 			setEmailValid(true);
@@ -69,6 +72,7 @@ export default function Signup() {
 		<main id='signup-page'>
 			<NavBar classprop='--alt' />
 			<div className='page-content bg-white'>
+				<div><span>Cadastro realizado com sucesso!</span></div>
 				<div className='signup-container'>
 					<div className='logo-content'>
 						<div className='logo-black'>{logo_black}</div>
@@ -142,23 +146,17 @@ export default function Signup() {
 									/>
 								</div>
 							</div>
-							<div
-								className='flex align-items-center'
-								style={{ margin: '16px 0' }}
-							>
-								{genders.map(g => {
-									return (
-										<div className='pr-12  flex align-items-center'>
-											<Input
-												value={g}
-												type={'radio'}
-												name='gender'
-												onChange={ev => handleChange('gender', g)}
-											/>
-											<label className='pl-5'>{g}</label>
-										</div>
-									);
-								})}
+							<div className= 'flex align-items-center' style={{margin: '16px 0'}}>
+								{genders.map((g) => {
+									return <div className='flex align-items-center pr-12'>
+										<Input value={g} 
+												type={'radio'} 
+												name="gender"
+												onChange={(ev) => handleChange('gender', g)}/>
+										<label className='pl-5'>{g}</label>
+									</div>
+								}	  
+								)}
 							</div>
 							<div className='m-12'>
 								<Button
