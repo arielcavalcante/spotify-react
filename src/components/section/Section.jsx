@@ -1,15 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { CardList } from '../';
 
 import './Section.css';
 
 export default function Section({
+	cards,
+	children,
+	classprop,
 	title,
 	subtitle,
 	link,
-	cardlist,
-	classprop,
 }) {
 	return (
 		<section className='section-component'>
@@ -18,15 +18,11 @@ export default function Section({
 					<h5 className='section__title'>{title}</h5>
 					<p className='section__subtitle'>{subtitle}</p>
 				</div>
-				<NavLink className='category__smallcaps' to='/'>
-					<span>{link || 'ver tudo'}</span>
+				<NavLink className='category__smallcaps' to={`${link || '/'}`}>
+					<span>ver tudo</span>
 				</NavLink>
 			</div>
-			<CardList
-				className={classprop}
-				classprop={classprop}
-				cardlist={cardlist}
-			/>
+			{children}
 		</section>
 	);
 }

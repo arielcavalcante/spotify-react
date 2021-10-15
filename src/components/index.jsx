@@ -7,6 +7,8 @@ import ListItem from './listitem/ListItem';
 import Menu from './menu/Menu';
 import NavBar from './navbar/NavBar';
 import Section from './section/Section';
+import Song from './song/Song';
+import SongList from './songlist/SongList';
 import Input from './input/Input';
 import InputSelect from './inputSelect/InputSelect';
 
@@ -20,6 +22,8 @@ export {
 	Menu,
 	NavBar,
 	Section,
+	Song,
+	SongList,
 	Input,
-	InputSelect
+	InputSelect,
 };

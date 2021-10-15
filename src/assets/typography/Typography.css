@@ -37,7 +37,6 @@ a:hover {
 }
 .menu__link.active {
 	color: white;
-	background-color: #282828;
 }
 .type-tiny {
 	color: #b3b3b3;
@@ -47,7 +46,7 @@ a:hover {
 a.type-tiny.green:hover {
 	color: #1ed760;
 }
-@media (pointer: coarse), (min-width: 767px) {
+@media (min-width: 767px) {
 	.type-tiny {
 		font-size: 0.75rem;
 	}

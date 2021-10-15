@@ -6,7 +6,7 @@ import './CardList.css';
 
 export default function CardList({
 	alt,
-	cardlist,
+	cards,
 	classprop,
 	link,
 	source,
@@ -16,7 +16,7 @@ export default function CardList({
 }) {
 	return (
 		<div className={`cardlist-component${classprop || ''} hide-scrollbar`}>
-			{cardlist.map((c, i) => {
+			{cards.map((c, i) => {
 				return <Card key={uuid()} classprop={classprop} {...c} />;
 			})}
 		</div>

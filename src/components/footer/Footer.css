@@ -34,6 +34,7 @@
 .footer-component .menu__link {
 	width: 100%;
 	height: fit-content;
+	width: fit-content;
 	color: white;
 	font-size: 1rem;
 	padding: 0.375rem 0 1rem;
@@ -112,7 +113,7 @@
 	padding: 0;
 }
 
-@media (pointer: coarse), (min-width: 768px) {
+@media (min-width: 768px) {
 	.footer__menu {
 		flex-direction: row;
 	}

@@ -1,0 +1,6 @@
+#playlist-page {
+	position: relative;
+}
+#playlist-page .page-content {
+	width: calc(100vw - 16rem);
+}
