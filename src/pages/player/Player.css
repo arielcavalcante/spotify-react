@@ -1,0 +1,23 @@
+.page-content {
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	padding: 1rem;
+	height: 100vh;
+	width: calc(100vw - 16.5rem);
+	z-index: 0;
+	overflow-y: scroll;
+}
+.section-component:first-of-type .section__title {
+	font-size: 2rem;
+}
+
+@media (max-width: 767px) {
+	.page-content {
+		height: calc(100vh - 5rem);
+		width: 100vw !important;
+	}
+}

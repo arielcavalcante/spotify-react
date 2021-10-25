@@ -11,14 +11,22 @@
 	cursor: pointer;
 	letter-spacing: 0.1rem;
 }
-.black-text{
+.black-text {
 	color: black;
 }
-.disabled{
+.disabled {
 	opacity: 0.5;
 }
-.white-text{
+.white-text {
 	color: white;
+}
+.blue-text {
+	color: #2941ab;
+}
+.uppercase {
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 0.875rem 2rem 0.75rem;
 }
 .calltoaction:hover {
 	transform: scale(1.04);

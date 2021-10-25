@@ -4,7 +4,12 @@ import { CardList, NavBar, Section } from '../../components';
 import './PlaylistCollection.css';
 import '../../assets/typography/Typography.css';
 
-import { playlists, podcasts, dailymixes, recentlyplayed } from '../home/data';
+import {
+	playlists,
+	podcasts,
+	dailymixes,
+	recentlyplayed,
+} from '../player/data.js';
 
 export default function PlaylistCollection() {
 	return (

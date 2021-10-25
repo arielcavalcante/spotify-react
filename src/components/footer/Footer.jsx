@@ -5,7 +5,28 @@ import { v4 as uuid } from 'uuid';
 import './Footer.css';
 import { country, logo, ig, fb, tt } from '../../icons';
 
-export default function Footer({ footerlist }) {
+export default function Footer() {
+	const footerlist = [
+		{
+			title: 'empresa',
+			li: ['Sobre', 'Empregos', 'For the Record'],
+		},
+		{
+			title: 'comunidades',
+			li: [
+				'Para Artistas',
+				'Desenvolvedores',
+				'Publicidade',
+				'Investidores',
+				'Fornecedores',
+			],
+		},
+		{
+			title: 'links úteis',
+			li: ['Suporte', 'Player da Web', 'Aplicativo móvel grátis'],
+		},
+	];
+
 	return (
 		<footer className='footer-component'>
 			<nav>
@@ -23,7 +44,7 @@ export default function Footer({ footerlist }) {
 									<li>
 										{f.li.map((li, y) => {
 											return (
-												<Link className='menu__link' to='/faq'>
+												<Link className='menu__link' to='/faq' key={uuid()}>
 													{li}
 												</Link>
 											);
