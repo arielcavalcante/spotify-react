@@ -1,15 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import {
-	Faq,
-	Home,
-	Login,
-	Player,
-	PlaylistCollection,
-	Playlist,
-	Signup,
-} from './pages';
+import { Faq, Home, Login, Player, Library, Playlist, Signup } from './pages';
 import './App.css';
 
 function App() {
@@ -23,7 +15,7 @@ function App() {
 					<Route path='/player' exact component={Player} />
 					<Route path='/faq' component={Faq} />
 					<Route path='/signup' component={Signup} />
-					<Route path='/playlists' component={PlaylistCollection} />
+					<Route path='/playlists' component={Library} />
 					<Route path='/:link' component={Playlist} />
 				</Switch>
 			</Router>

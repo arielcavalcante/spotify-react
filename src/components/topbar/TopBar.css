@@ -1,0 +1,14 @@
+.topbar-component {
+	display: flex;
+	gap: 1rem;
+}
+
+.calltoaction.arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	width: 3rem;
+	height: 3rem;
+}
