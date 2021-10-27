@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { Button } from '../';
+import { Button, Search } from '../';
 
 import './TopBar.css';
 import { arrow_left, arrow_right } from '../../icons';
@@ -22,6 +22,7 @@ export default function TopBar() {
 				text={arrow_right}
 				disabled
 			/>
+			<Search />
 		</div>
 	);
 }

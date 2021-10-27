@@ -67,6 +67,14 @@ ul li {
 	color: black;
 }
 
+/* display */
+.flex {
+	display: flex;
+}
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
 /* sizing */
 .w-full {
 	width: 100%;

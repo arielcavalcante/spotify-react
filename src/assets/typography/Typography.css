@@ -46,6 +46,11 @@ a:hover {
 a.type-tiny.green:hover {
 	color: #1ed760;
 }
+
+.font-regular {
+	font-weight: 400;
+}
+
 @media (min-width: 767px) {
 	.type-tiny {
 		font-size: 0.75rem;
