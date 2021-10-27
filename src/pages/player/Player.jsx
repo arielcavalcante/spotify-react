@@ -3,7 +3,6 @@ import React from 'react';
 import { CardList, NavBar, Section, TopBar } from '../../components';
 
 import './Player.css';
-import '../../assets/typography/Typography.css';
 
 import { playlists, podcasts, dailymixes, recentlyplayed } from './data';
 
@@ -24,16 +23,16 @@ export default function Player() {
 			<NavBar />
 			<div className='page-content'>
 				<TopBar />
-				<Section title={shift()}>
+				<Section title={shift()} link='playlists'>
 					<CardList classprop='--card-alt' cards={recentlyplayed} />
 				</Section>
 				<Section title='Suas playlists' link='playlists'>
 					<CardList cards={playlists} />
 				</Section>
-				<Section title='Seus programas'>
-					<CardList link='playlists' cards={podcasts} />
+				<Section title='Seus programas' link='playlists'>
+					<CardList cards={podcasts} />
 				</Section>
-				<Section title='Feitos pra você'>
+				<Section title='Feitos pra você' link='playlists'>
 					<CardList
 						cards={dailymixes}
 						subtitle='Quanto mais você escutar, melhores recomendações vai receber.'
