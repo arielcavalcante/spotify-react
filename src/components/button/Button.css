@@ -24,8 +24,7 @@
 .blue-text {
 	color: #2941ab;
 }
-.uppercase {
-	text-transform: uppercase;
+.calltoaction.uppercase {
 	font-weight: 700;
 	padding: 0.875rem 2rem 0.75rem;
 }

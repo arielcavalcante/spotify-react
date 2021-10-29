@@ -3,7 +3,6 @@ import { NavBar, Input, InputSelect, Button } from '../../components';
 import { logo_black } from '../../icons';
 
 import './Signup.css';
-import '../../assets/typography/Typography.css';
 import { edit, search, player } from '../../icons';
 
 const formDefault = {

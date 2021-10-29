@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { CardList, Section, NavBar, TopBar } from '../../components';
+import {
+	CardList,
+	Section,
+	NavBar,
+	TopBar,
+} from '../../components';
 
 import { recentsearches } from './data.js';
 import './Search.css';

@@ -2,7 +2,6 @@ import React from 'react';
 import { CardList, NavBar, Section, TopBar } from '../../components';
 
 import './Library.css';
-import '../../assets/typography/Typography.css';
 
 import {
 	playlists,

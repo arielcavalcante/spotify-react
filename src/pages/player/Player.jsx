@@ -3,7 +3,6 @@ import React from 'react';
 import { CardList, NavBar, Section, TopBar } from '../../components';
 
 import './Player.css';
-import '../../assets/typography/Typography.css';
 
 import { playlists, podcasts, dailymixes, recentlyplayed } from './data';
 

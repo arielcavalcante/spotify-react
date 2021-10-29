@@ -11,6 +11,7 @@ import {
 	Search,
 	Signup,
 } from './pages';
+import './assets/typography/Typography.css';
 import './App.css';
 
 function App() {

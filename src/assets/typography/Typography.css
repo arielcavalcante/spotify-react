@@ -48,7 +48,9 @@ a.type-tiny.green:hover {
 .font-regular {
 	font-weight: 400;
 }
-
+.uppercase {
+	text-transform: uppercase;
+}
 @media (min-width: 767px) {
 	.type-tiny {
 		font-size: 0.75rem;
