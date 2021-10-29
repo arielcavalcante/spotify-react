@@ -30,10 +30,25 @@
 }
 .calltoaction:hover {
 	transform: scale(1.04);
-	background-color: #21e065;
+	filter: brightness(110%);
 }
-
 .calltoaction:active {
 	transform: scale(1);
-	background-color: #169c46;
+	filter: brightness(95%);
+}
+.noscale:hover {
+	transform: scale(1);
+}
+.calltoaction:focus-visible {
+	outline-offset: 0.25rem;
+}
+.calltoaction.white {
+	border: 0.125rem solid #333;
+}
+.calltoaction.white:hover {
+	background-color: #555;
+	color: white;
+}
+.calltoaction.black:hover {
+	background-color: #333;
 }

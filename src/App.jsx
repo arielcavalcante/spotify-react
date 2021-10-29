@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {
 	Faq,
 	Home,
+	Login,
 	Player,
 	PlaylistCollection,
 	Playlist,
@@ -17,6 +18,7 @@ function App() {
 			<Router>
 				<Switch>
 					<Route path='/' exact component={Home} />
+					<Route path='/login' exact component={Login} />
 					{/* <Route path='/search' exact component={Search} />} /> */}
 					<Route path='/player' exact component={Player} />
 					<Route path='/faq' component={Faq} />
