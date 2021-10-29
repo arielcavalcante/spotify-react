@@ -1,10 +1,24 @@
+.select-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0.5rem 0 0.75rem;
+	gap: 0.125rem;
+}
 .select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #f1f1f1;
-    border-radius: 5px;
-    color: rgba(0,0,0,0.3);
-    font-weight: 800;
+	width: 100%;
+	padding: 0.75rem 1.25rem;
+	box-sizing: border-box;
+	border: 0.0625rem solid #d9dadc;
+	border-radius: 0.1875rem;
+	font-weight: 700;
+	color: rgb(0, 0, 0, 0.3);
+}
+.select:focus,
+.select:focus-visible {
+	border: 0.0625rem solid #919496;
+	box-shadow: none;
+	outline: none;
+}
+.select option {
+	color: black;
 }
