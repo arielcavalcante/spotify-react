@@ -50,19 +50,24 @@ export default function Login() {
 					fullWidth='w-full'
 					required
 				/>
-				<div className='checkbox-wrapper'>
-					<Input
-						type='checkbox'
-						label2='Lembrar de mim'
-						name='remember'
-						aria='Permanecer logado'
-					/>
-				</div>
+				<NavLink to='/login' className='link'>
+					Esqueceu sua senha?
+				</NavLink>
 				<div className='login-signup'>
-					<Button
-						text='Entrar'
-						classname='dark-green white-text uppercase noscale w-full'
-					/>
+					<div className='flex w-full gap-1'>
+						<div className='checkbox-wrapper'>
+							<Input
+								type='checkbox'
+								label2='Lembrar de mim'
+								name='remember'
+								aria='Permanecer logado'
+							/>
+						</div>
+						<Button
+							text='Entrar'
+							classname='dark-green white-text uppercase noscale w-full'
+						/>
+					</div>
 					<h4>Não tem uma conta?</h4>
 					<Button
 						text='Inscreva-se no spotify'
