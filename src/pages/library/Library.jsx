@@ -1,7 +1,7 @@
 import React from 'react';
-import { CardList, NavBar, Section } from '../../components';
+import { CardList, NavBar, Section, TopBar } from '../../components';
 
-import './PlaylistCollection.css';
+import './Library.css';
 import '../../assets/typography/Typography.css';
 
 import {
@@ -11,11 +11,12 @@ import {
 	recentlyplayed,
 } from '../player/data.js';
 
-export default function PlaylistCollection() {
+export default function Library() {
 	return (
-		<main id='playlistcollection-page'>
+		<main id='library-page'>
 			<NavBar />
 			<div className='page-content'>
+				<TopBar />
 				<Section title='Suas playlists' link='playlists'>
 					<CardList cards={playlists} />
 				</Section>

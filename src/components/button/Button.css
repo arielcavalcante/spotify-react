@@ -16,6 +16,7 @@
 }
 .disabled {
 	opacity: 0.5;
+	cursor: not-allowed;
 }
 .white-text {
 	color: white;
@@ -28,7 +29,7 @@
 	font-weight: 700;
 	padding: 0.875rem 2rem 0.75rem;
 }
-.calltoaction:hover {
+.calltoaction:hover:not(.disabled) {
 	transform: scale(1.04);
 	filter: brightness(110%);
 }
@@ -45,10 +46,10 @@
 .calltoaction.white {
 	border: 0.125rem solid #333;
 }
-.calltoaction.white:hover {
+.calltoaction.white:hover:not(.disabled) {
 	background-color: #555;
 	color: white;
 }
-.calltoaction.black:hover {
+.calltoaction.black:hover:not(.disabled) {
 	background-color: #333;
 }

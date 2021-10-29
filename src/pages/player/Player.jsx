@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CardList, NavBar, Section } from '../../components';
+import { CardList, NavBar, Section, TopBar } from '../../components';
 
 import './Player.css';
 import '../../assets/typography/Typography.css';
@@ -23,6 +23,7 @@ export default function Player() {
 		<main id='player-page'>
 			<NavBar />
 			<div className='page-content'>
+				<TopBar />
 				<Section title={shift()}>
 					<CardList classprop='--card-alt' cards={recentlyplayed} />
 				</Section>

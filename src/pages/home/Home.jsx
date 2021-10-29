@@ -19,7 +19,7 @@ export default function Home() {
 				<h4 className='green-text'>Continue curtindo de onde parou.</h4>
 				<Button
 					link={'/player'}
-					color='blue-text uppercase'
+					classname='blue-text uppercase'
 					text='Acesse o Web Player'
 				></Button>
 			</section>

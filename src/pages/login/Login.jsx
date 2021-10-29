@@ -16,19 +16,19 @@ export default function Login() {
 				<h5>Para continuar, faça login no spotify</h5>
 				<Button
 					text='Continue com Facebook'
-					color='fb-blue white-text uppercase noscale'
+					classname='fb-blue white-text uppercase noscale'
 				/>
 				<Button
 					text='Continue com Apple'
-					color='black white-text uppercase noscale'
+					classname='black white-text uppercase noscale'
 				/>
 				<Button
 					text='Continue com Google'
-					color='black-text white uppercase noscale'
+					classname='black-text white uppercase noscale'
 				/>
 				<Button
 					text='Continue com Telefone'
-					color='black-text white uppercase noscale'
+					classname='black-text white uppercase noscale'
 				/>
 				<span>ou</span>
 			</div>
@@ -71,7 +71,7 @@ export default function Login() {
 					<h4>Não tem uma conta?</h4>
 					<Button
 						text='Inscreva-se no spotify'
-						color='white uppercase noscale w-full'
+						classname='white uppercase noscale w-full'
 					/>
 				</div>
 			</form>
