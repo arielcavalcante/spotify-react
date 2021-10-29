@@ -3,21 +3,15 @@ import { Link } from 'react-router-dom';
 import { Menu } from '../';
 
 import './NavBar.css';
-import { home, edit, faq, logo } from '../../icons';
+import { logo } from '../../icons';
 
-export default function NavBar({ classprop, title }) {
+export default function NavBar({ classprop, list, title }) {
 	return (
 		<nav className={`navbar-component${classprop || ''}`}>
 			<Link className='logo' to='/'>
 				{logo}
 			</Link>
-			<Menu
-				list={[
-					{ icon: home, title: 'Início', link: '/' },
-					{ icon: edit, title: 'Cadastrar', link: '/signup' },
-					{ icon: faq, title: 'Faq', link: '/faq' },
-				]}
-			/>
+			<Menu list={list} />
 		</nav>
 	);
 }

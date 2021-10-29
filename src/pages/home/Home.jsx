@@ -1,44 +1,29 @@
 import React from 'react';
 
-import { CardList, NavBar, Section } from '../../components';
+import { Button, Footer, NavBar } from '../../components';
 
 import './Home.css';
-import '../../assets/typography/Typography.css';
-
-import { playlists, podcasts, dailymixes, recentlyplayed } from './data';
+import { edit, search, player } from '../../icons';
 
 export default function Home() {
-	function shift() {
-		const hours = new Date().getHours();
-		if (hours >= 6 && hours < 12) {
-			return 'Bom dia';
-		} else if (hours >= 12 && hours < 18) {
-			return 'Boa tarde';
-		} else {
-			return 'Boa noite';
-		}
-	}
-
+	const list = [
+		{ icon: edit, title: 'Premium', link: '/signup' },
+		{ icon: search, title: 'Suporte', link: '/faq' },
+		{ icon: player, title: 'Player', link: '/player' },
+	];
 	return (
-		<main id='home-page'>
-			<NavBar />
-			<div className='page-content'>
-				<Section title={shift()}>
-					<CardList classprop='--card-alt' cards={recentlyplayed} />
-				</Section>
-				<Section title='Suas playlists' link='playlists'>
-					<CardList cards={playlists} />
-				</Section>
-				<Section title='Seus programas'>
-					<CardList link='playlists' cards={podcasts} />
-				</Section>
-				<Section title='Feitos pra você'>
-					<CardList
-						cards={dailymixes}
-						subtitle='Quanto mais você escutar, melhores recomendações vai receber.'
-					/>
-				</Section>
-			</div>
-		</main>
+		<div id='home-page'>
+			<NavBar classprop='--alt' list={list} />
+			<section>
+				<h1 className='hero green-text'>Suas músicas estão com saudade</h1>
+				<h4 className='green-text'>Continue curtindo de onde parou.</h4>
+				<Button
+					link={'/player'}
+					color='blue-text uppercase'
+					text='Acesse o Web Player'
+				></Button>
+			</section>
+			<Footer />
+		</div>
 	);
 }

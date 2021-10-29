@@ -31,7 +31,7 @@ a:hover {
 .menu__link:hover {
 	color: #1ed760;
 }
-#home-page .menu__link:hover {
+#player-page .menu__link:hover {
 	color: white;
 	fill: white;
 }

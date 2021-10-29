@@ -23,14 +23,11 @@ section.bubblebackground {
 	align-items: center;
 	justify-content: space-between;
 }
-.search-container h1 {
-	font-size: 4rem;
+.search-container .hero {
+	font-size: 3rem;
 	text-align: center;
 	line-height: 1.2;
 	padding: 1.35rem 0;
-}
-.search-container h1 {
-	font-size: 3rem;
 }
 .search-container div {
 	width: 100%;
@@ -100,7 +97,7 @@ Except styles overrides. */
 	padding: 4rem 1rem;
 	justify-content: space-between;
 }
-.comunity-section h1 {
+.comunity-section h2 {
 	color: black;
 	font-weight: 900;
 	font-size: 2rem;
@@ -119,6 +116,13 @@ Except styles overrides. */
 }
 
 /* --------------- Responsiveness --------------- */
+
+/* ========================== */
+/* ========================== */
+/* ========== 768 =========== */
+/* ========================== */
+/* ========================== */
+
 @media (min-width: 768px) {
 	#faq-page .navbar-component .logo {
 		padding: 0 1rem;
@@ -126,8 +130,10 @@ Except styles overrides. */
 	#faq-page .menu__list {
 		margin: 0;
 	}
-	.search-container h1 {
+	.search-container .hero {
 		font-size: 4rem;
+		letter-spacing: -0.125rem;
+		padding: 5rem 0 2.5rem;
 	}
 	.category-section {
 		background-color: white;
@@ -148,11 +154,6 @@ Except styles overrides. */
 	.topsolutions-container {
 		max-width: 48rem;
 	}
-	.search-container h1 {
-		letter-spacing: -0.125rem;
-
-		padding: 5rem 0 2.5rem;
-	}
 	#faq-page .navbar-component {
 		gap: unset;
 		justify-content: space-between;
@@ -160,7 +161,7 @@ Except styles overrides. */
 	.comunity-section {
 		padding: 4.5rem 1rem;
 	}
-	.comunity-section h1 {
+	.comunity-section h2 {
 		font-size: 2.5rem;
 		padding-bottom: 2rem;
 	}
@@ -194,7 +195,7 @@ Except styles overrides. */
 	.accordion-wrapper {
 		max-width: 62rem;
 	}
-	.comunity-section h1 {
+	.comunity-section h2 {
 		font-size: 3rem;
 	}
 	.category-section {

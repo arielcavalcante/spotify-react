@@ -1,23 +1,56 @@
-.page-content {
-	position: fixed;
-	top: 0;
-	right: 0;
-	display: flex;
-	flex-direction: column;
-	gap: 1.5rem;
-	padding: 1rem;
-	height: 100vh;
-	width: calc(100vw - 16.5rem);
-	z-index: 0;
-	overflow-y: scroll;
+#home-page {
+	min-height: 100vh;
 }
-.section-component:first-of-type .section__title {
-	font-size: 2rem;
+#home-page section {
+	background-color: rgb(41, 65, 171);
+	background-image: url(https://www-growth.scdn.co/static/home/bursts-mobile.svg);
+	background-position: center top 30%;
+	background-repeat: no-repeat;
+	background-size: 195%;
+	height: 100vh;
+	text-align: center;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	justify-content: center;
+	overflow: hidden;
+	gap: 1.5rem;
+}
+#home-page .hero {
+	font-size: 3rem;
+	width: 30rem;
+}
+#home-page .calltoaction {
+	margin: 1rem;
+}
+#home-page .footer__menu .menu__link {
+	font-weight: 400;
 }
 
-@media (max-width: 767px) {
-	.page-content {
-		height: calc(100vh - 5rem);
-		width: 100vw !important;
+@media screen and (min-width: 768px) {
+	#home-page section {
+		background-image: url(https://www-growth.scdn.co/static/home/bursts-tablet.svg);
+		background-size: 153%;
+		background-position: right 40% center;
+		-webkit-box-pack: center;
+		justify-content: center;
+	}
+	#home-page .hero {
+		font-size: 6.5rem;
+		width: 50rem;
+	}
+}
+@media screen and (min-width: 1024px) {
+	#home-page {
+		background-size: 175%;
+		background-position: 46% 4%;
+		background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
+		min-height: 53rem;
+	}
+	#home-page .hero {
+		font-size: 6rem;
+		width: 40rem;
 	}
 }
