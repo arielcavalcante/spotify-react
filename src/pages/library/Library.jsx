@@ -1,14 +1,8 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { CardList, NavBar, Section, TopBar } from '../../components';
 
 import './Library.css';
 import * as Provider from '../providers/provider';
-// import {
-// 	playlists,
-// 	podcasts,
-// 	dailymixes,
-// 	recentlyplayed,
-// } from '../player/data.js';
 
 export default function Library() {
 	const [data, setData] = useState({
