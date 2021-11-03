@@ -1,0 +1,76 @@
+#profile-page {
+	background-color: white;
+}
+.herocover {
+	background-image: linear-gradient(180deg, #121e3d 0, #000);
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	padding: 7vw 7vw 0 7vw;
+	gap: 5vw;
+}
+.herocover .text-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5vw;
+}
+.herocover h1 {
+	font-size: 1.625rem;
+}
+.herocover p {
+	font-size: 0.875rem;
+	line-height: 150%;
+	text-align: center;
+}
+#profile-page .form-wrapper {
+	margin: auto;
+	margin-top: 0;
+}
+#profile-page .inputs-row {
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.inputs-row .input-container,
+.inputs-row .select-container {
+	width: calc((100% / 3) - 0.75rem);
+}
+
+#profile-page .select-container select,
+#profile-page .input-container input {
+	height: 2.5rem;
+	width: 100%;
+}
+#profile-page .select-container,
+#profile-page .input-container {
+	margin: 0;
+}
+
+@media (min-width: 768px) {
+	.herocover {
+		flex-direction: row;
+		padding: 10vw 10vw 0 10vw;
+		gap: 5vw;
+	}
+	.herocover .text-container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 58%;
+		gap: 1rem;
+	}
+	.herocover h1 {
+		font-size: 4.5rem;
+	}
+	.herocover p {
+		font-size: 1rem;
+		text-align: left;
+	}
+	.herocover img {
+		max-width: 27%;
+	}
+	.row-revert button {
+		margin: 0;
+	}
+
+}

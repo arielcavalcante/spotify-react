@@ -15,7 +15,7 @@ export default function Input({
 	error = false,
 	errorText = '',
 	classname,
-	labelclass,
+	labelclass = '',
 	fullWidth,
 	autofocus,
 	autocapitalize,
@@ -44,7 +44,7 @@ export default function Input({
 				autoComplete={autocomplete}
 				autoCorrect={autocorrect}
 			/>
-			<label className={labelclass} htmlFor={name}>
+			<label htmlFor={name} className={labelclass}>
 				{label2}
 			</label>
 			{error && <span>{errorText}</span>}

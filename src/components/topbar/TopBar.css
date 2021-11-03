@@ -25,6 +25,17 @@
 .custom-input.round {
 	width: 100%;
 }
+
+.profilebtn img {
+	padding: 0;
+}
+
+.profilebtn img {
+	height: 2.75rem;
+	width: auto;
+	border-radius: 5rem;
+}
+
 @media (min-width: 768px) {
 	.topbar-component {
 		left: 16.5rem;

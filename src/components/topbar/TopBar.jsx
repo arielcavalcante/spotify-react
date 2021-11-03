@@ -23,6 +23,11 @@ export default function TopBar() {
 				disabled
 			/>
 			<Search />
+			<Button
+				link='profile'
+				classname='transparent profilebtn'
+				text={<img src='assets/temp/user.jpeg' alt='Foto de perfil' />}
+			/>
 		</div>
 	);
 }
