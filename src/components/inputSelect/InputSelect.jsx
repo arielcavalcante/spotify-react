@@ -5,9 +5,12 @@ import './InputSelect.css';
 export default function InputSelect({
 	options = [],
 	onChange,
+	classname,
+	disabled,
 	name,
 	label,
 	labelclass,
+	placeholder = 'Mês',
 }) {
 	const [selected, setSelected] = useState('');
 	const handleChange = ev => {
@@ -15,18 +18,19 @@ export default function InputSelect({
 		onChange(ev.target.value);
 	};
 	return (
-		<div className='select-container'>
+		<div className={`select-container ${classname}`}>
 			<label className={labelclass} htmlFor={name}>
 				{label}
 			</label>
 			<select
-				className='select'
+				className={`select ${disabled ? 'disabled' : ''}`}
 				name={name}
 				onChange={handleChange}
 				value={selected}
+				disabled={`${disabled ? 'disabled' : ''}`}
 			>
 				<option value='' disabled selected hidden>
-					Mês
+					{placeholder}
 				</option>
 				{options.map(opt => (
 					<option key={uuid()} value={opt}>
