@@ -18,14 +18,13 @@ body {
 a:hover {
 	fill: white;
 }
-#player-page main {
-	height: 100vh;
-	width: 100%;
-	display: flex;
-	background: linear-gradient(180deg, #501218 0%, #121212 30%);
-}
+
 #faq-page main {
 	height: 100%;
+}
+.inner-player .page-content {
+	height: calc(100vh - 5.5rem);
+	padding-top: 5rem;
 }
 ul {
 	margin-block-start: 0;
