@@ -9,6 +9,7 @@ export default function SongList({
 	songs,
 	classprop,
 	link,
+	playlist,
 	source,
 	subtitle,
 	title,
@@ -17,7 +18,15 @@ export default function SongList({
 	return (
 		<div className={`songlist-component${classprop || ''}`}>
 			{songs.map((c, i) => {
-				return <Song key={uuid()} classprop={classprop} {...c} />;
+				return (
+					<Song
+						key={uuid()}
+						classprop={`${classprop || ''}`}
+						classname='lightgray-border uppercase'
+						playlist={playlist}
+						{...c}
+					/>
+				);
 			})}
 		</div>
 	);
