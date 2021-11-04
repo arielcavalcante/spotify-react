@@ -18,7 +18,7 @@ export default function InputSelect({
 		onChange(ev.target.value);
 	};
 	return (
-		<div className={`select-container ${classname}`}>
+		<div className={`select-container ${classname || ''}`}>
 			<label className={labelclass} htmlFor={name}>
 				{label}
 			</label>

@@ -12,7 +12,7 @@ export default function Section({
 	link,
 }) {
 	return (
-		<section className={`section-component ${classname}`}>
+		<section className={`section-component ${classname || ''}`}>
 			<div className='section__header'>
 				<div>
 					<h5 className='section__title'>{title}</h5>

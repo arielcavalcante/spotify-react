@@ -29,7 +29,9 @@ export default function Input({
 				{label}
 			</label>
 			<input
-				className={`custom-input ${classname} ${fullWidth ? 'w-full' : ''}`}
+				className={`custom-input ${classname || ''} ${
+					fullWidth ? 'w-full' : ''
+				}`}
 				placeholder={placeholder}
 				type={type}
 				id={name}
