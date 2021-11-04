@@ -2,8 +2,9 @@ import React from 'react';
 
 import {
 	CardList,
-	Section,
+	MusicPlayer,
 	NavBar,
+	Section,
 	TopBar,
 } from '../../components';
 
@@ -12,14 +13,15 @@ import './Search.css';
 
 export default function Search() {
 	return (
-		<main id='search-page'>
+		<div id='search-page' className='inner-player'>
 			<NavBar />
-			<div className='page-content'>
+			<main className='page-content'>
 				<TopBar />
 				<Section title='Pesquisas recentes'>
 					<CardList cards={recentsearches} />
 				</Section>
-			</div>
-		</main>
+			</main>
+			<MusicPlayer />
+		</div>
 	);
 }

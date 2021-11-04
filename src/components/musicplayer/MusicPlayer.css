@@ -1,8 +1,5 @@
-#player-page footer,
-#search-page footer,
-#playlist-page footer,
-#library-page footer {
-	position: absolute;
+.inner-player footer {
+	position: fixed;
 	bottom: 0;
 	left: 0;
 	width: 100vw;

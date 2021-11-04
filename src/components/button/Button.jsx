@@ -17,7 +17,9 @@ export default function Button({
 			{link ? (
 				<NavLink
 					to={link}
-					className={`calltoaction ${classname} ${disabled ? 'disabled' : ''}`}
+					className={`calltoaction ${classname || ''} ${
+						disabled ? 'disabled' : ''
+					}`}
 					disabled={disabled}
 					onClick={onclick}
 				>
@@ -26,7 +28,9 @@ export default function Button({
 			) : (
 				<button
 					onClick={onclick}
-					className={`calltoaction ${classname} ${disabled ? 'disabled' : ''}`}
+					className={`calltoaction ${classname || ''} ${
+						disabled ? 'disabled' : ''
+					}`}
 					disabled={disabled}
 				>
 					{text}

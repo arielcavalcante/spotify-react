@@ -1,3 +1,9 @@
+#player-page {
+	display: block;
+	position: relative;
+	height: 100vh;
+	width: calc(100vw - (100vw - 100%));
+}
 .page-content {
 	position: fixed;
 	top: 0;
@@ -7,17 +13,56 @@
 	gap: 1.5rem;
 	padding: 1rem;
 	height: 100vh;
-	width: calc(100vw - 16.5rem);
-	z-index: 0;
-	overflow-y: scroll;
+	width: 100%;
+	z-index: 1;
+	overflow-y: auto;
 }
+
+.card-component--card-alt {
+	transition: all 1s ease;
+}
+.card-component--card-alt:hover::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: calc(100vw - 16.5rem);
+	height: 25vh;
+	z-index: -1;
+	transition: all 1s ease;
+	background: linear-gradient(180deg, rgb(168, 56, 104) 0%, #121212 100%);
+}
+.card-component--card-alt:nth-of-type(1)::before {
+	background: linear-gradient(180deg, #501218 0%, #121212 100%);
+}
+.card-component--card-alt:nth-of-type(3)::before {
+	background: linear-gradient(180deg, rgb(168, 56, 104) 0%, #121212 100%);
+}
+.card-component--card-alt:nth-of-type(2)::before,
+.card-component--card-alt:nth-of-type(6)::before {
+	background: linear-gradient(180deg, rgb(240, 136, 48) 0%, #121212 100%);
+}
+
+.card-component--card-alt:nth-of-type(4)::before,
+.card-component--card-alt:nth-of-type(5)::before {
+	background: linear-gradient(180deg, rgb(16, 136, 176) 0%, #121212 100%);
+}
+
 .section-component:first-of-type .section__title {
 	font-size: 2rem;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
 	.page-content {
+		left: 16.5rem;
 		height: calc(100vh - 5rem);
+		width: calc(100vw - 16.5rem);
+	}
+}
+@media (max-width: 767px) {
+	.card-component--card-alt:hover::before,
+	.card-component--card-alt::before {
 		width: 100vw !important;
 	}
 }
