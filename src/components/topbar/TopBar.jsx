@@ -22,7 +22,13 @@ export default function TopBar({ searchclass }) {
 				text={arrow_right}
 				disabled
 			/>
-			<Search searchclass={searchclass} />
+			<Search />
+			<Button
+				link='profile'
+				classname='transparent profilebtn'
+				text={<img src='assets/temp/user.jpeg' alt='Foto de perfil' />}
+			/>
+
 		</div>
 	);
 }

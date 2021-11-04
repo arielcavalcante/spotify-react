@@ -19,6 +19,7 @@ export default function InputSelect({
 	};
 	return (
 		<div className={`select-container ${classname || ''}`}>
+
 			<label className={labelclass} htmlFor={name}>
 				{label}
 			</label>
