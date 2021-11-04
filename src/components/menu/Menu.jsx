@@ -11,7 +11,7 @@ export default function Menu({ list }) {
 	const dispatch = useDispatch();
 
 	const defaultlist = [
-		{ icon: home, title: 'Início', link: '/player' },
+		{ icon: home, title: 'Início', link: '/' },
 		{ icon: search, title: 'Pesquisa', link: '/search' },
 		{ icon: library, title: 'Sua Biblioteca', link: '/playlists' },
 		{ icon: library, title: 'Sair', link: null, action: handleLogout },

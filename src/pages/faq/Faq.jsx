@@ -59,9 +59,10 @@ export default function Faq() {
 		},
 	];
 	const navlist = [
+		{ icon: edit, title: 'Início', link: '/' },
 		{ icon: edit, title: 'Premium', link: '/signup' },
 		{ icon: search, title: 'Suporte', link: '/faq' },
-		{ icon: player, title: 'Player', link: '/player' },
+		// { icon: player, title: 'Player', link: '/player' },
 	];
 	return (
 		<div id='faq-page'>

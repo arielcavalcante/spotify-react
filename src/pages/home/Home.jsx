@@ -9,7 +9,7 @@ export default function Home() {
 	const list = [
 		{ icon: edit, title: 'Premium', link: '/signup' },
 		{ icon: search, title: 'Suporte', link: '/faq' },
-		{ icon: player, title: 'Player', link: '/player' },
+		// { icon: player, title: 'Player', link: '/player' },
 	];
 	return (
 		<div id='home-page'>
@@ -18,7 +18,7 @@ export default function Home() {
 				<h1 className='hero green-text'>Suas músicas estão com saudade</h1>
 				<h4 className='green-text'>Continue curtindo de onde parou.</h4>
 				<Button
-					link={'/player'}
+					link={'/signup'}
 					classname='blue-text uppercase'
 					text='Acesse o Web Player'
 				></Button>

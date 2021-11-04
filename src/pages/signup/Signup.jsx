@@ -21,6 +21,7 @@ const formDefault = {
 const genders = ['Masculino', 'Feminino', 'Não-binário'];
 export default function Signup() {
 	const dispatch = useDispatch()
+	
 	const [form, setForm] = useState(formDefault);
 	const [emailValid, setEmailValid] = useState(true);
 	const months = [
@@ -70,10 +71,8 @@ export default function Signup() {
 		);
 	}
 	const navlist = [
-		{ icon: edit, title: 'Premium', link: '/signup' },
+		{ icon: edit, title: 'Início', link: '/' },
 		{ icon: search, title: 'Suporte', link: '/faq' },
-		{ icon: player, title: 'Player', link: '/player' },
-		{ icon: edit, title: 'Inscreva-se', link: '/signup' },
 		{ icon: edit, title: 'Login', link: '/login' },
 	];
 	return (

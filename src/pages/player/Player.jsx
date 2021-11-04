@@ -11,7 +11,10 @@ import {
 import './Player.css';
 
 import * as Provider from '../providers/provider';
+import { useSelector } from 'react-redux';
+
 export default function Player() {
+	const user = useSelector(({user}) => user);
 
 	const [data, setData] = useState({
 		dailymixes: [],
@@ -41,11 +44,11 @@ export default function Player() {
 	function shift() {
 		const hours = new Date().getHours();
 		if (hours >= 6 && hours < 12) {
-			return 'Bom dia';
+			return `Bom dia, ${user.cdcv}`;
 		} else if (hours >= 12 && hours < 18) {
-			return 'Boa tarde';
+			return `Bom tarde, ${user.cdcv}`;
 		} else {
-			return 'Boa noite';
+			return `Bom noite, ${user.cdcv}`;
 		}
 	}
 
