@@ -8,6 +8,7 @@ import {
 	Player,
 	Library,
 	Playlist,
+	Profile,
 	Search,
 	Signup,
 } from './pages';
@@ -29,6 +30,7 @@ function App() {
 							<Route path='/faq' component={Faq} />
 							<Route path='/playlists' component={Library} />
 							<Route path='/:link' component={Playlist} />
+              <Route path='/profile' component={Profile} />
 							</>
 						) : (
 							<>
@@ -39,6 +41,7 @@ function App() {
 							</>
 						)
 					}
+
 				</Switch>
 			</Router>
 		</div>

@@ -1,5 +1,6 @@
 .topbar-component {
 	background-color: #121212;
+	height: 5rem;
 	width: calc(100% - 1.25rem);
 	padding: 0 1rem;
 	display: flex;
@@ -25,6 +26,17 @@
 .custom-input.round {
 	width: 100%;
 }
+
+.profilebtn img {
+	padding: 0;
+}
+
+.profilebtn img {
+	height: 2.75rem;
+	width: auto;
+	border-radius: 5rem;
+}
+
 @media (min-width: 768px) {
 	.topbar-component {
 		left: 16.5rem;

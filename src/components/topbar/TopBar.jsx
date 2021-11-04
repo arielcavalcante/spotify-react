@@ -6,7 +6,7 @@ import { Button, Search } from '../';
 import './TopBar.css';
 import { arrow_left, arrow_right } from '../../icons';
 
-export default function TopBar() {
+export default function TopBar({ searchclass }) {
 	const history = useHistory();
 	return (
 		<div className='topbar-component'>
@@ -23,6 +23,12 @@ export default function TopBar() {
 				disabled
 			/>
 			<Search />
+			<Button
+				link='profile'
+				classname='transparent profilebtn'
+				text={<img src='assets/temp/user.jpeg' alt='Foto de perfil' />}
+			/>
+
 		</div>
 	);
 }
