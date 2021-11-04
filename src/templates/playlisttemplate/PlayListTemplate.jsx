@@ -53,6 +53,14 @@ export default function PlayListTemplate({ songs, title, currentPlaylist }) {
 					{/* TODO: Trocar pela prop songs, pra q o link dê match */}
 					<SongList songs={songs} playlist={currentPlaylist} />
 				</Section>
+				<Section title='Recomendados'>
+					{/* TODO: Trocar pela prop songs, pra q o link dê match */}
+					<SongList
+						songs={songs}
+						playlist={currentPlaylist}
+						classprop='--alt'
+					/>
+				</Section>
 			</main>
 			<MusicPlayer />
 		</div>

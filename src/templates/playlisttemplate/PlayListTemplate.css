@@ -1,7 +1,7 @@
 #playlist-page {
 	position: relative;
 }
-#playlist-page .section__header {
+#playlist-page section:not(:nth-of-type(3)) .section__header {
 	display: none;
 }
 #playlist-page .page-content {
@@ -43,6 +43,9 @@
 }
 .playlist__thumbnail img {
 	width: 10rem;
+}
+#playlist-page section .section__header {
+	margin: 0 0.5rem 1rem;
 }
 
 @media (min-width: 411px) {
