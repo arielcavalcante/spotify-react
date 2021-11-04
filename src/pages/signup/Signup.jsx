@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { NavBar, Input, InputSelect, Button } from '../../components';
-import { useDispatch } from 'react-redux';
-
 import { logo_black } from '../../icons';
+
 import './Signup.css';
 import { edit, search, player } from '../../icons';
-
-import { setUserData } from '../store/user.reducer';
 
 const formDefault = {
 	email: '',
@@ -20,7 +17,6 @@ const formDefault = {
 };
 const genders = ['Masculino', 'Feminino', 'Não-binário'];
 export default function Signup() {
-	const dispatch = useDispatch()
 	const [form, setForm] = useState(formDefault);
 	const [emailValid, setEmailValid] = useState(true);
 	const months = [
@@ -43,8 +39,16 @@ export default function Signup() {
 	const handleSubmit = ev => {
 		ev.preventDefault();
 		setForm(formDefault);
-		dispatch(setUserData(form));
+
+		download(JSON.stringify(form), 'json.txt', 'text/plain');
 	};
+	function download(content, fileName, contentType) {
+		var a = document.createElement('a');
+		var file = new Blob([content], { type: contentType });
+		a.href = URL.createObjectURL(file);
+		a.download = fileName;
+		a.click();
+	}
 	function checkEmails() {
 		if (
 			form.email !== form.email_confirm &&
@@ -73,13 +77,11 @@ export default function Signup() {
 		{ icon: edit, title: 'Premium', link: '/signup' },
 		{ icon: search, title: 'Suporte', link: '/faq' },
 		{ icon: player, title: 'Player', link: '/player' },
-		{ icon: edit, title: 'Inscreva-se', link: '/signup' },
-		{ icon: edit, title: 'Login', link: '/login' },
 	];
 	return (
 		<main id='signup-page'>
 			<NavBar classprop='--alt' list={navlist} />
-			<div className='page-content bg-white'>
+			<div className='white'>
 				<div>
 					<span>Cadastro realizado com sucesso!</span>
 				</div>
