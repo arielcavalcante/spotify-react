@@ -60,20 +60,7 @@ const orgulhotropical = [
 		artist: 'Os Amantes, Jaloo, Strobo',
 		duration: '3:59',
 	},
-	// {
-	// 	id: '',
-	// 	title: '',
-	// 	artist: '',
-	// 	album: '',
-	// 	duration: '',
-	// },
-	// {
-	// 	id: '',
-	// 	title: 'Eu Vou Fazer Uma Macumba Pra Te Amarrar, Maldito! - Ao Vivo',
-	// 	artist: 'Johnny Hooker',
-	// 	album: '',
-	// 	duration: '',
-	// },
+	
 ];
 orgulhotropical.map((song, i) => {
 	return (song.id = i + 1);

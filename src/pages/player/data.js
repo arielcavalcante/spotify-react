@@ -9,9 +9,10 @@ const playlists = [
 		owner: 'spotify',
 	},
 	{
-		title: 'PRIDE Orgulho Tropical',
+		title: 'Orgulho Tropical',
 		subtitle:
-			'Sucessos e novidades de artistas Brasileires LGBTQ+ que nos enchem de orgulho! Foto: MEL',
+			'Sucessos e novidades de artistas Brasileires LGBTQ+ que nos enchem de orgulho!',
+		foto: 'Foto: MEL',
 		type: 'playlist',
 		link: 'orgulho-tropical',
 		playlist: 'orgulhotropical',
@@ -19,8 +20,8 @@ const playlists = [
 	},
 	{
 		title: 'Brega Funk',
-		subtitle:
-			'Os grandes hinos da união do Brega com o Funk. Foto: Ruivinha de Marte.',
+		subtitle: 'Os grandes hinos da união do Brega com o Funk. ',
+		foto: 'Foto: Ruivinha de Marte',
 		type: 'playlist',
 		link: 'brega-funk',
 		playlist: 'bregafunk',
