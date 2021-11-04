@@ -73,7 +73,7 @@
 	min-width: 1.75rem;
 }
 .song__duration {
-	width: 2rem;
+	width: 2.5rem;
 	text-align: right;
 	justify-self: flex-end;
 }
@@ -90,9 +90,14 @@
 }
 @media (pointer: coarse), (max-width: 560px) {
 	.song__text-wrapper {
-		max-width: 9rem;
+		max-width: 15rem;
 	}
 	.song__album {
 		display: none;
+	}
+}
+@media (pointer: coarse), (max-width: 411px) {
+	.song__text-wrapper {
+		max-width: 9rem;
 	}
 }

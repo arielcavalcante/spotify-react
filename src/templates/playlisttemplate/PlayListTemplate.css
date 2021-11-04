@@ -79,6 +79,7 @@
 		font-variant: normal;
 		color: white;
 		font-weight: 600;
+		line-height: 1.5;
 	}
 	.playlist-header h6 {
 		font-size: 0.875rem;

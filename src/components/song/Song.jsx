@@ -11,6 +11,7 @@ export default function Song({
 	duration,
 	link,
 	id,
+	playlist,
 	source,
 	title,
 	type,
@@ -27,7 +28,7 @@ export default function Song({
 					<img
 						className={type}
 						alt={`Capa da música ${title}` || 'missing alt'}
-						src={source || `../assets/temp/${id}.jpeg`}
+						src={source || `../assets/temp/${playlist.playlist}/${id}.jfif`}
 					/>
 				</figure>
 				<div className='song__text-wrapper--horizontal'>

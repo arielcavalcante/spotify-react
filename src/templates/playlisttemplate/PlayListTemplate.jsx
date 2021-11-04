@@ -10,12 +10,9 @@ import {
 
 import './PlayListTemplate.css';
 
-import { orgulhotropical } from './data';
-import { playlists } from '../../pages/player/data.js';
-
-export default function PlayListTemplate({ songs, title }) {
-	const songsAndDuration = `・ ${orgulhotropical.length} músicas, ${Math.floor(
-		orgulhotropical
+export default function PlayListTemplate({ songs, title, currentPlaylist }) {
+	const songsAndDuration = `・ ${songs.length} músicas, ${Math.floor(
+		songs
 			.map((s, i) => {
 				return (
 					parseInt(s.duration.split(':')[0] * 60) +
@@ -36,24 +33,25 @@ export default function PlayListTemplate({ songs, title }) {
 					<figure className='playlist__thumbnail'>
 						<img
 							alt={
-								`Capa do ${playlists[1].type} ${playlists[1].title}` ||
+								`Capa do ${currentPlaylist.type} ${currentPlaylist.title}` ||
 								'missing alt'
 							}
-							src={`assets/${playlists[1].title}.jfif`}
+							src={`assets/${currentPlaylist.title}.jfif`}
 						/>
 					</figure>
 					<div className='text-wrapper'>
-						<p className='category__smallcaps'>{playlists[1].type}</p>
-						<h2 className='text__huge'>{playlists[1].title}</h2>
-						<p className='subtitle'>{playlists[1].subtitle}</p>
+						<p className='category__smallcaps'>{currentPlaylist.type}</p>
+						<h2 className='text__huge'>{currentPlaylist.title}</h2>
+						<p className='subtitle'>{currentPlaylist.subtitle}</p>
 						<div className='flex gap-05 align-center'>
-							<h4 className='text__owner'>{playlists[1].owner}</h4>
+							<h4 className='text__owner'>{currentPlaylist.owner}</h4>
 							<h6>{songsAndDuration}</h6>
 						</div>
 					</div>
 				</Section>
 				<Section title={title}>
-					<SongList songs={orgulhotropical} />
+					{/* TODO: Trocar pela prop songs, pra q o link dê match */}
+					<SongList songs={songs} playlist={currentPlaylist} />
 				</Section>
 			</main>
 			<MusicPlayer />

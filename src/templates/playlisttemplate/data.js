@@ -1,69 +1,140 @@
-const orgulhotropical = [
-	{
-		id: '',
-		title: 'Mutante',
-		artist: 'MEL',
-		duration: '2:22',
-	},
-	{
-		id: '',
-		title: 'Baby 95',
-		artist: 'Liniker',
-		duration: '5:18',
-	},
-	{
-		id: '',
-		title: 'Rainha de Copas',
-		artist: 'Majur, Liniker',
-		album: 'Ojunifé',
-		duration: '2:28',
-	},
-	{
-		id: '',
-		title: 'Oasis',
-		artist: 'Potyguara Bardo, MangoLab',
-		duration: '4:23',
-	},
-	{
-		id: '',
-		title: 'Mapa',
-		artist: 'Bruna Mendez, Davi Sabbag',
-		duration: '3:11',
-	},
-	{
-		id: '',
-		title: 'Foi Mal',
-		artist: 'Urias',
-		duration: '2:45',
-	},
-	{
-		id: '',
-		title: "Bom Mesmo É Estar Debaixo D'Água",
-		artist: 'Luedji Luna',
-		duration: '4:31',
-	},
-	{
-		id: '',
-		title: 'Salvador',
-		artist: 'Arthur Nogueira, Hiran, Ubuntu',
-		duration: '2:42',
-	},
-	{
-		id: '',
-		title: 'E Se Não Era Amor',
-		artist: 'Romero Ferro',
-		duration: '3:30',
-	},
-	{
-		id: '',
-		title: 'Linda',
-		artist: 'Os Amantes, Jaloo, Strobo',
-		duration: '3:59',
-	},
-	
-];
-orgulhotropical.map((song, i) => {
-	return (song.id = i + 1);
-});
+const playlistSongs = {
+	orgulhotropical: [
+		{
+			id: '',
+			title: 'Mutante',
+			artist: 'MEL',
+			duration: '2:22',
+		},
+		{
+			id: '',
+			title: 'Baby 95',
+			artist: 'Liniker',
+			duration: '5:18',
+		},
+		{
+			id: '',
+			title: 'Rainha de Copas',
+			artist: 'Majur, Liniker',
+			album: 'Ojunifé',
+			duration: '2:28',
+		},
+		{
+			id: '',
+			title: 'Oasis',
+			artist: 'Potyguara Bardo, MangoLab',
+			duration: '4:23',
+		},
+		{
+			id: '',
+			title: 'Mapa',
+			artist: 'Bruna Mendez, Davi Sabbag',
+			duration: '3:11',
+		},
+		{
+			id: '',
+			title: 'Foi Mal',
+			artist: 'Urias',
+			duration: '2:45',
+		},
+		{
+			id: '',
+			title: "Bom Mesmo É Estar Debaixo D'Água",
+			artist: 'Luedji Luna',
+			duration: '4:31',
+		},
+		{
+			id: '',
+			title: 'Salvador',
+			artist: 'Arthur Nogueira, Hiran, Ubuntu',
+			duration: '2:42',
+		},
+		{
+			id: '',
+			title: 'E Se Não Era Amor',
+			artist: 'Romero Ferro',
+			duration: '3:30',
+		},
+		{
+			id: '',
+			title: 'Linda',
+			artist: 'Os Amantes, Jaloo, Strobo',
+			duration: '3:59',
+		},
+	],
+	afrobeatessentials: [
+		{
+			id: '',
+			title: 'Water No Get Enemy',
+			artist: 'Fela Kuti',
+			album: 'The Best of the Black President',
+			duration: '9:51',
+		},
+		{
+			id: '',
+			title: 'The Volcano Song',
+			artist: 'The Budos Band',
+			album: 'The Budos Band',
+			duration: '2:50',
+		},
+		{
+			id: '',
+			title: 'Jorge Botafogo',
+			artist: 'Iconili',
+			album: 'Piacó',
+			duration: '4:41',
+		},
+		{
+			id: '',
+			title: 'Malunguinho',
+			artist: 'Abayomy Afrobeat Orquestra',
+			album:
+				'Daora: Underground Sounds of Urban Brasil- Hip-Hop, Beats, Afro & Dub',
+			duration: '7:37',
+		},
+		{
+			id: '',
+			title: 'Mr. Foolish (feat. Seun Kuti)',
+			artist: 'Adekunle Gold, Seun Kuti',
+			album: 'About 30',
+			duration: '4:02',
+		},
+		{
+			id: '',
+			title: 'Montego Sunset',
+			artist: 'Menahan Street Band',
+			album: 'Make the Road By Walking',
+			duration: '3:18',
+		},
+		{
+			id: '',
+			title: 'Zombie',
+			artist: 'Fela Kuti',
+			album: 'Zombie',
+			duration: '12:25',
+		},
+		{
+			id: '',
+			title: 'Africa Will be Great Again',
+			artist: 'Fela Kuti',
+			album: 'One People One World',
+			duration: '4:47',
+		},
+		{
+			id: '',
+			title: 'Pulsos (feat. Antibalas Horns)',
+			artist: 'Balún, Antibalas Horns',
+			album: 'Prisma Tropical',
+			duration: '4:28',
+		},
+		{
+			id: '',
+			title: 'Cumbia Africana',
+			artist: 'Son Palenque',
+			album: 'Afro-Colombian Sound Modernizers',
+			duration: '3:26',
+		},
+	],
+};
 
-export { orgulhotropical };
+export { playlistSongs };
