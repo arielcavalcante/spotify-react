@@ -6,13 +6,13 @@ import './Section.css';
 export default function Section({
 	cards,
 	children,
-	classprop,
+	classname,
 	title,
 	subtitle,
 	link,
 }) {
 	return (
-		<section className='section-component'>
+		<section className={`section-component ${classname || ''}`}>
 			<div className='section__header'>
 				<div>
 					<h5 className='section__title'>{title}</h5>

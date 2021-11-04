@@ -5,7 +5,7 @@
 	display: flex;
 	flex: 1 0;
 }
-.song-component:hover {
+[class^='song-component']:hover {
 	background-color: #282828;
 	border-radius: 0.25rem;
 }
@@ -66,16 +66,15 @@
 }
 .song__album {
 	align-items: left;
-	width: 5rem;
+	width: 9rem;
 }
 .song__id {
 	display: block;
 	min-width: 1.75rem;
 }
 .song__duration {
-	width: 2rem;
+	width: 6.25rem;
 	text-align: right;
-	justify-self: flex-end;
 }
 
 [class*='vertical'] {
@@ -83,24 +82,46 @@
 	flex-direction: column;
 }
 
-@media (pointer: coarse), (max-width: 767px) {
-	.song__title,
-	.song__artist {
-		max-width: 9rem;
+[class*='alt'] .calltoaction {
+	padding: 0.5rem 2rem;
+	margin: 0;
+}
+[class*='alt'] .song__album {
+	align-items: left;
+	width: 15rem;
+}
+
+@media (max-width: 922px) {
+	[class*='alt'] .song__album {
+		display: none;
 	}
+}
+@media (pointer: coarse), (max-width: 767px) {
 	.song__id {
 		min-width: 1rem;
+	}
+	[class*='alt'] .song__album {
+		max-width: 10rem;
+	}
+}
+@media (pointer: coarse), (max-width: 560px) {
+	.song__text-wrapper {
+		max-width: 15rem;
+	}
+	.song__album {
+		display: none;
+	}
+	[class*='alt'] .song__text-wrapper {
+		max-width: 5rem;
 	}
 }
 @media (pointer: coarse), (max-width: 411px) {
 	.song__text-wrapper {
 		max-width: 9rem;
 	}
-	.song__title,
-	.song__artist {
-		max-width: 9rem;
-	}
-	.song__album {
+}
+@media (pointer: coarse), (max-width: 360px) {
+	[class*='alt'] .song__id {
 		display: none;
 	}
 }

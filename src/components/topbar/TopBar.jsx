@@ -6,7 +6,7 @@ import { Button, Search } from '../';
 import './TopBar.css';
 import { arrow_left, arrow_right } from '../../icons';
 
-export default function TopBar() {
+export default function TopBar({ searchclass }) {
 	const history = useHistory();
 	return (
 		<div className='topbar-component'>
@@ -22,7 +22,7 @@ export default function TopBar() {
 				text={arrow_right}
 				disabled
 			/>
-			<Search />
+			<Search searchclass={searchclass} />
 		</div>
 	);
 }
