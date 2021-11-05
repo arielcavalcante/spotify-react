@@ -117,16 +117,11 @@
 }
 @media (pointer: coarse), (max-width: 411px) {
 	.song__text-wrapper {
-		max-width: 15rem;
+		max-width: 9rem;
 	}
 }
 @media (pointer: coarse), (max-width: 360px) {
 	[class*='alt'] .song__id {
 		display: none;
-	}
-}
-@media (pointer: coarse), (max-width: 411px) {
-	.song__text-wrapper {
-		max-width: 9rem;
 	}
 }
