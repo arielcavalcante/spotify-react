@@ -28,6 +28,7 @@ function App() {
 						<Route path='/playlists' exact component={Library} />
 						<Route path='/playlists/:link' component={Playlist} />
 						<Route path='/profile' exact component={Profile} />
+						<Route path='/faq' exact component={Faq} />
 						<Route component={Player} />
 					</Switch>
 				) : (

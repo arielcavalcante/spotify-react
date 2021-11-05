@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-// import { NavLink } from 'react-router-dom';
 import { Button, Footer, Input, InputSelect, NavBar } from '../../components';
 
 import './Profile.css';
-import { edit, search, player } from '../../icons';
+import { home, search, player } from '../../icons';
 
 const formDefault = {
 	email: '',
@@ -56,7 +55,7 @@ export default function Profile() {
 	}
 
 	const navlist = [
-		{ icon: edit, title: 'Premium', link: '/signup' },
+		{ icon: home, title: 'Início', link: '/' },
 		{ icon: search, title: 'Suporte', link: '/faq' },
 		{ icon: player, title: 'Player', link: '/player' },
 	];

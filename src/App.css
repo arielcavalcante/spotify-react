@@ -40,7 +40,9 @@ ul li {
 	letter-spacing: -0.125rem;
 	text-align: center;
 }
-
+.text-center {
+	text-align: center;
+}
 /* colors */
 .dark-green {
 	background-color: #15883e;

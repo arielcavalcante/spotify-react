@@ -1,13 +1,11 @@
-.bg-white {
-	background-color: white;
-	height: calc(100vh - 3.375rem);
-	overflow: hidden;
-}
-
-#signup-page .page-content {
+#signup-page .signup-page {
 	min-height: calc(100vh - 5rem);
 	width: 100vw;
 	position: static;
+}
+#signup-page .white {
+	height: 100%;
+	padding-bottom: 3rem;
 }
 #signup-page .menu__list {
 	display: flex;

@@ -21,7 +21,6 @@ export default function Song({
 }) {
 	return (
 		<>
-			{/* O componente padrão é renderizado exceto se for passado uma classprop 'alt', daí o componente com botão de adicionar é renderizado. */}
 			{!classprop.includes('alt') ? (
 				<div className={`song-component${classprop || ''}`}>
 					<Link

@@ -70,8 +70,9 @@ export default function Login() {
 					</div>
 					<h4>Não tem uma conta?</h4>
 					<Button
+						link='player'
 						text='Inscreva-se no spotify'
-						classname='white uppercase noscale w-full'
+						classname='white uppercase noscale w-full text-center'
 					/>
 				</div>
 			</form>

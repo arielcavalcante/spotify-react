@@ -13,7 +13,6 @@ export default function Button({
 }) {
 	return (
 		<>
-			{/* Se uma props *link* for passada, o componente será um link. */}
 			{link ? (
 				<NavLink
 					to={link}

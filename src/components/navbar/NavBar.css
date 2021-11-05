@@ -13,8 +13,6 @@
 	z-index: 1;
 }
 
-/* _________________________________________________ */
-/* ------------------ ALT VERSION ------------------ */
 .navbar-component--alt {
 	background-color: black;
 	height: 3.375rem;
@@ -48,8 +46,8 @@
 .navbar-component--alt .menu-component .menu__link svg {
 	display: none;
 }
-/* ------------------ ALT VERSION ------------------ */
-/* _________________________________________________ */
+
+/* ------------------ Alt Version ------------------ */
 
 @media (min-width: 768px) {
 	.navbar-component {

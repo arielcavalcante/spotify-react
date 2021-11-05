@@ -78,7 +78,7 @@ export default function Signup() {
 	return (
 		<main id='signup-page'>
 			<NavBar classprop='--alt' list={navlist} />
-			<div className='page-content bg-white'>
+			<div className='white'>
 				<div>
 					<span>Cadastro realizado com sucesso!</span>
 				</div>
