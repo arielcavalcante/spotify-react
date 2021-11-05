@@ -65,7 +65,7 @@ export default function Login() {
 						</div>
 						<Button
 							text='Entrar'
-							color='dark-green white-text uppercase noscale w-full'
+							classname='dark-green white-text uppercase noscale w-full'
 						/>
 					</div>
 					<h4>Não tem uma conta?</h4>

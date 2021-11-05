@@ -6,11 +6,12 @@
 }
 .custom-input {
 	color: #343434;
-	padding: 0.75rem 1.25rem;
+	padding: 0.75rem 0.75rem;
 	box-sizing: border-box;
 	border: 0.0625rem solid #d9dadc;
 	border-radius: 0.1875rem;
 }
+
 .custom-input:focus,
 .custom-input:focus-visible {
 	border: 0.0625rem solid #919496;
@@ -23,25 +24,23 @@
 	opacity: 0.3;
 	font-weight: 600;
 }
-
 :-ms-input-placeholder {
 	/* Internet Explorer */
 	color: #000;
 	opacity: 0.3;
 	font-weight: 600;
 }
-
 ::placeholder {
 	color: #000;
 	opacity: 0.3;
 	font-weight: 600;
 }
+
 .input-container span {
 	color: #f94343;
 	font-size: 0.9rem;
 }
-
-.input-container label {
+label {
 	font-size: 0.875rem;
 	color: black;
 	font-weight: 600;
@@ -52,4 +51,24 @@
 	height: 1rem;
 	border-radius: 0.5rem;
 	margin-right: 0.5rem;
+}
+.input-container [type='radio'] {
+	width: 1rem;
+	height: 1rem;
+	border-radius: 0.5rem;
+	margin-right: 0.5rem;
+}
+.custom-input.round {
+	border-radius: 5rem;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
 }

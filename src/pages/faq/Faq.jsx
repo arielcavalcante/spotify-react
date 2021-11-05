@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Accordion, Button, Footer, NavBar } from '../../components';
 
 import './Faq.css';
-import '../../assets/typography/Typography.css';
+import { edit, search, player } from '../../icons';
 
 export default function Faq() {
 	const list = [
@@ -58,10 +58,15 @@ export default function Faq() {
 			],
 		},
 	];
+	const navlist = [
+		{ icon: edit, title: 'Premium', link: '/signup' },
+		{ icon: search, title: 'Suporte', link: '/faq' },
+		{ icon: player, title: 'Player', link: '/player' },
+	];
 	return (
 		<div id='faq-page'>
 			<main>
-				<NavBar classprop='--alt' />
+				<NavBar classprop='--alt' list={navlist} />
 				<section className='bubblebackground'>
 					<div className='search-container'>
 						<h1 className='hero'>Como podemos ajudar?</h1>

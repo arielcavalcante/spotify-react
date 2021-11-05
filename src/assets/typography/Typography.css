@@ -21,17 +21,16 @@ a:hover {
 	font-weight: 600;
 	text-decoration: none;
 }
-
 .menu__link {
 	color: #b3b3b3;
 	text-decoration: none;
 	font-size: 1rem;
 	font-weight: 700;
 }
-.menu__link:hover {
+.navbar-component--alt .menu__link:hover {
 	color: #1ed760;
 }
-#player-page .menu__link:hover {
+.menu__link:hover {
 	color: white;
 	fill: white;
 }
@@ -45,6 +44,12 @@ a:hover {
 }
 a.type-tiny.green:hover {
 	color: #1ed760;
+}
+.font-regular {
+	font-weight: 400;
+}
+.uppercase {
+	text-transform: uppercase;
 }
 @media (min-width: 767px) {
 	.type-tiny {

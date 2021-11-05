@@ -1,8 +1,13 @@
 import React from 'react';
-import { CardList, NavBar, Section, TopBar } from '../../components';
+import {
+	CardList,
+	MusicPlayer,
+	NavBar,
+	Section,
+	TopBar,
+} from '../../components';
 
 import './Library.css';
-import '../../assets/typography/Typography.css';
 
 import {
 	playlists,
@@ -13,9 +18,9 @@ import {
 
 export default function Library() {
 	return (
-		<main id='library-page'>
+		<div id='library-page' className='inner-player'>
 			<NavBar />
-			<div className='page-content'>
+			<main className='page-content'>
 				<TopBar />
 				<Section title='Suas playlists' link='playlists'>
 					<CardList cards={playlists} />
@@ -29,7 +34,8 @@ export default function Library() {
 				<Section link='playlists'>
 					<CardList cards={recentlyplayed} />
 				</Section>
-			</div>
-		</main>
+			</main>
+			<MusicPlayer />
+		</div>
 	);
 }

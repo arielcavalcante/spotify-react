@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
-import { CardList, NavBar, Section, TopBar } from '../../components';
+import {
+	CardList,
+	MusicPlayer,
+	NavBar,
+	Section,
+	TopBar,
+} from '../../components';
 
 import './Player.css';
-import '../../assets/typography/Typography.css';
 
 import * as Provider from '../providers/provider';
 
@@ -44,27 +49,35 @@ export default function Player() {
 		}
 	}
 
+	const scroll = e => {
+		document.querySelector('.page-content').scrollTop > 0
+			? (document.querySelector('.topbar-component').style.background =
+					'#121212')
+			: (document.querySelector('.topbar-component').style.background =
+					'transparent');
+	};
 	return (
-		<main id='player-page'>
+		<div id='player-page' className='inner-player'>
 			<NavBar />
-			<div className='page-content'>
+			<main className='page-content' onLoad={scroll} onScroll={scroll}>
 				<TopBar />
-				<Section title={shift()}>
+				<Section title={shift()} link='playlists'>
 					<CardList classprop='--card-alt' cards={data.recentlyplayed} />
 				</Section>
 				<Section title='Suas playlists' link='playlists'>
 					<CardList cards={data.playlists} />
 				</Section>
-				<Section title='Seus programas'>
+				<Section title='Seus programas' link='playlists'>
 					<CardList link='playlists' cards={data.podcasts} />
 				</Section>
-				<Section title='Feitos pra você'>
+				<Section title='Feitos pra você' link='playlists'>
 					<CardList
 						cards={data.dailymixes}
 						subtitle='Quanto mais você escutar, melhores recomendações vai receber.'
 					/>
 				</Section>
-			</div>
-		</main>
+			</main>
+			<MusicPlayer />
+		</div>
 	);
 }

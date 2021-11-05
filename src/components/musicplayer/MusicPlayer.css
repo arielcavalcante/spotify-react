@@ -1,0 +1,44 @@
+.inner-player footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	z-index: 1;
+}
+.rhap_container {
+	background-color: #181818;
+}
+.rhap_time {
+	color: #b3b3b3;
+}
+.rhap_progress-filled {
+	background-color: #ddd;
+}
+.rhap_progress-bar {
+	background-color: #868686;
+}
+.rhap_progress-indicator {
+	opacity: 0;
+}
+.rhap_progress-bar .rhap_progress-indicator,
+.rhap_progress-bar .rhap_progress-filled {
+	transition: all 200ms ease;
+}
+.rhap_progress-bar:hover .rhap_progress-indicator,
+.rhap_volume-container:hover .rhap_volume-indicator {
+	opacity: 1;
+	background-color: white;
+	transition: all 200ms ease;
+}
+.rhap_progress-bar:hover .rhap_progress-filled {
+	background-color: #1db954;
+	transition: all 200ms ease;
+}
+.rhap_main-controls svg:hover {
+	color: #fff;
+}
+.rhap_main-controls .rhap_play-pause-button svg {
+	transition: all 500ms ease;
+	height: 100%;
+	width: 100%;
+}

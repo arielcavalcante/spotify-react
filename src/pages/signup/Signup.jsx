@@ -3,7 +3,7 @@ import { NavBar, Input, InputSelect, Button } from '../../components';
 import { logo_black } from '../../icons';
 
 import './Signup.css';
-import '../../assets/typography/Typography.css';
+import { edit, search, player } from '../../icons';
 
 const formDefault = {
 	email: '',
@@ -31,6 +31,7 @@ export default function Signup() {
 		'Setembro',
 		'Outubro',
 		'Novembro',
+		'Dezembro',
 	];
 	const handleChange = (field, newValue) => {
 		setForm({ ...form, [field]: newValue });
@@ -72,9 +73,14 @@ export default function Signup() {
 			emailValid
 		);
 	}
+	const navlist = [
+		{ icon: edit, title: 'Premium', link: '/signup' },
+		{ icon: search, title: 'Suporte', link: '/faq' },
+		{ icon: player, title: 'Player', link: '/player' },
+	];
 	return (
 		<main id='signup-page'>
-			<NavBar classprop='--alt' />
+			<NavBar classprop='--alt' list={navlist} />
 			<div className='page-content bg-white'>
 				<div>
 					<span>Cadastro realizado com sucesso!</span>
@@ -90,14 +96,16 @@ export default function Signup() {
 						</h3>
 						<form className='form' onSubmit={handleSubmit}>
 							<Input
-								placeholder='E-mail'
+								label='Qual é o seu e-mail?'
+								placeholder='Insira seu e-mail'
 								name='email'
 								value={form.email}
 								onChange={ev => handleChange('email', ev.target.value)}
 								fullWidth
 							/>
 							<Input
-								placeholder='Confirmar e-mail'
+								label='Confirme email'
+								placeholder='Insira o e-mail novamente'
 								name='confirmar_email'
 								value={form.email_confirm}
 								onChange={ev => handleChange('email_confirm', ev.target.value)}
@@ -107,7 +115,8 @@ export default function Signup() {
 								fullWidth
 							/>
 							<Input
-								placeholder='Senha'
+								label='Crie uma senha'
+								placeholder='Crie uma senha'
 								name='senha'
 								type={'password'}
 								value={form.password}
@@ -115,19 +124,24 @@ export default function Signup() {
 								fullWidth
 							/>
 							<Input
-								placeholder='Como devemos chamar você?'
+								label='Como devemos te chamar?'
+								placeholder='Insira um nome de perfil'
 								name='cdcv'
 								value={form.cdcv}
 								onChange={ev => handleChange('cdcv', ev.target.value)}
 								fullWidth
 							/>
-							<label className='input-label'>Data de nascimento</label>
+							<label className='input-label'>
+								Qual sua data de nascimento?
+							</label>
 							<div className='flex'>
 								<div style={{ width: '20%' }} className='pr-5'>
 									<Input
+										label='Dia'
 										placeholder='Dia'
 										name='dia'
 										type='number'
+										labelclass='font-regular'
 										value={form.birth_day}
 										onChange={ev => handleChange('birth_day', ev.target.value)}
 										fullWidth
@@ -135,7 +149,9 @@ export default function Signup() {
 								</div>
 								<div style={{ width: '80%' }} className='pl-5 pr-5'>
 									<InputSelect
+										label='Mês'
 										placeholder='Mês'
+										labelclass='font-regular'
 										name='mes'
 										options={months}
 										onChange={value => handleChange('birth_month', value)}
@@ -143,6 +159,7 @@ export default function Signup() {
 								</div>
 								<div style={{ width: '20%' }} className='pl-5'>
 									<Input
+										label='Ano'
 										placeholder='Ano'
 										name='ano'
 										type='number'
@@ -161,11 +178,12 @@ export default function Signup() {
 										<div className='flex align-items-center pr-12'>
 											<Input
 												value={g}
+												label2={g}
+												classname='black-text flex'
 												type={'radio'}
 												name='gender'
 												onChange={ev => handleChange('gender', g)}
 											/>
-											<label className='pl-5'>{g}</label>
 										</div>
 									);
 								})}

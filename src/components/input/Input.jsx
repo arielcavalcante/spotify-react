@@ -4,7 +4,7 @@ import './Input.css';
 
 export default function Input({
 	placeholder = '',
-	value = '',
+	value,
 	onChange,
 	onBlur,
 	type = 'text',
@@ -14,6 +14,8 @@ export default function Input({
 	aria,
 	error = false,
 	errorText = '',
+	classname,
+	labelclass,
 	fullWidth,
 	autofocus,
 	autocapitalize,
@@ -23,24 +25,28 @@ export default function Input({
 }) {
 	return (
 		<div className='input-container'>
-			<label for={name}>{label}</label>
+			<label className={labelclass} htmlFor={name}>
+				{label}
+			</label>
 			<input
-				className={`custom-input ${fullWidth ? 'w-full' : ''}`}
+				className={`custom-input ${classname} ${fullWidth ? 'w-full' : ''}`}
 				placeholder={placeholder}
 				type={type}
 				id={name}
 				name={name}
-				value={value}
+				value={value ? value : undefined}
 				onChange={onChange}
 				onBlur={onBlur ? onBlur : null}
 				aria-label={aria}
-				autofocus={autofocus}
-				autocapitalize={autocapitalize}
+				autoFocus={autofocus}
+				autoCapitalize={autocapitalize}
 				required={required}
-				autocomplete={autocomplete}
-				autocorrect={autocorrect}
+				autoComplete={autocomplete}
+				autoCorrect={autocorrect}
 			/>
-			<label for={name}>{label2}</label>
+			<label className={labelclass} htmlFor={name}>
+				{label2}
+			</label>
 			{error && <span>{errorText}</span>}
 		</div>
 	);
