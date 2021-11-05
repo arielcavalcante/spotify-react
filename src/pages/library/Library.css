@@ -1,0 +1,11 @@
+#library-page {
+	position: relative;
+}
+#library-page .page-content {
+	width: calc(100vw - 16rem);
+}
+
+#library-page .section-component:not(:first-of-type) .section__header,
+#library-page .section__header:first-of-type a {
+	display: none;
+}

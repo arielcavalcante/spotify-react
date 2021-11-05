@@ -18,7 +18,7 @@ body {
 a:hover {
 	fill: white;
 }
-#home-page main {
+#player-page main {
 	height: 100vh;
 	width: 100%;
 	display: flex;
@@ -34,6 +34,44 @@ ul {
 ul li {
 	list-style-type: none;
 }
+
+/* font size */
+.hero {
+	font-size: 4rem;
+	letter-spacing: -0.125rem;
+	text-align: center;
+}
+
+/* colors */
+.dark-green {
+	background-color: #15883e;
+}
+.green {
+	background-color: #1ed760;
+}
+.fb-blue {
+	background-color: #3a61b3;
+}
+.black {
+	background-color: black;
+}
+.white {
+	background-color: white;
+}
+
+/* text colors */
+.green-text {
+	color: #1ed760;
+}
+.black-text {
+	color: black;
+}
+
+/* sizing */
+.w-full {
+	width: 100%;
+}
+
 /* margin */
 .m-0 {
 	margin: 0;
@@ -74,4 +112,7 @@ ul li {
 }
 .justify-content-center {
 	justify-content: center;
+}
+.gap-1 {
+	gap: 1rem;
 }

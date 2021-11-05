@@ -62,8 +62,8 @@
 }
 
 @media (max-width: 767px) {
-	#home-page .navbar-component,
-	#playlistcollection-page .navbar-component {
+	#player-page .navbar-component,
+	#library-page .navbar-component {
 		background-color: black;
 		height: 5rem;
 		width: 100vw;

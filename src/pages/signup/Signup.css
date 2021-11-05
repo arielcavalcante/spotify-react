@@ -22,7 +22,7 @@
 #signup-page .menu__link:hover {
 	color: #1ed760;
 }
-#signup-page .menu__link .home,
+#signup-page .menu__link .player,
 #signup-page .menu__link .faq {
 	display: none;
 }

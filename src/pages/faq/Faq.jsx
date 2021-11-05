@@ -58,33 +58,13 @@ export default function Faq() {
 			],
 		},
 	];
-	const footerlist = [
-		{
-			title: 'empresa',
-			li: ['Sobre', 'Empregos', 'For the Record'],
-		},
-		{
-			title: 'comunidades',
-			li: [
-				'Para Artistas',
-				'Desenvolvedores',
-				'Publicidade',
-				'Investidores',
-				'Fornecedores',
-			],
-		},
-		{
-			title: 'links úteis',
-			li: ['Suporte', 'Player da Web', 'Aplicativo móvel grátis'],
-		},
-	];
 	return (
 		<div id='faq-page'>
 			<main>
 				<NavBar classprop='--alt' />
 				<section className='bubblebackground'>
 					<div className='search-container'>
-						<h1>Como podemos ajudar?</h1>
+						<h1 className='hero'>Como podemos ajudar?</h1>
 						<div>
 							<input
 								aria-label='Search for questions here'
@@ -125,7 +105,7 @@ export default function Faq() {
 					<Accordion list={list} />
 				</section>
 				<section className='comunity-section'>
-					<h1>Visite a Comunidade</h1>
+					<h2>Visite a Comunidade</h2>
 					<p>
 						Tem uma pergunta? Encontre respostas na nossa Comunidade de fãs
 						especialistas do mundo todo!
@@ -133,7 +113,7 @@ export default function Faq() {
 					<Button text='Encontrar respostas' />
 				</section>
 			</main>
-			<Footer footerlist={footerlist} />
+			<Footer />
 		</div>
 	);
 }
