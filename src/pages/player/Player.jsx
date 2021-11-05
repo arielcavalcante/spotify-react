@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 import {
 	CardList,
@@ -13,6 +14,8 @@ import './Player.css';
 import * as Provider from '../providers/provider';
 
 export default function Player() {
+	const user = useSelector(({ user }) => user);
+
 	const [data, setData] = useState({
 		dailymixes: [],
 		playlists: [],
@@ -41,11 +44,11 @@ export default function Player() {
 	function shift() {
 		const hours = new Date().getHours();
 		if (hours >= 6 && hours < 12) {
-			return 'Bom dia';
+			return `Bom dia, ${user.cdcv}`;
 		} else if (hours >= 12 && hours < 18) {
-			return 'Boa tarde';
+			return `Boa tarde, ${user.cdcv}`;
 		} else {
-			return 'Boa noite';
+			return `Boa noite, ${user.cdcv}`;
 		}
 	}
 

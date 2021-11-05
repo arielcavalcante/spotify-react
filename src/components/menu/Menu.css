@@ -51,6 +51,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		white-space: nowrap;
 	}
 	.menu__link.active {
 		background-color: black;

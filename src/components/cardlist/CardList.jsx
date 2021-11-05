@@ -17,7 +17,14 @@ export default function CardList({
 	return (
 		<div className={`cardlist-component${classprop || ''} hide-scrollbar`}>
 			{cards.map((c, i) => {
-				return <Card key={uuid()} classprop={classprop} {...c} />;
+				return (
+					<Card
+						key={uuid()}
+						link={`${c.link ? 'playlists/' + c.link : ''}`}
+						classprop={classprop}
+						{...c}
+					/>
+				);
 			})}
 		</div>
 	);

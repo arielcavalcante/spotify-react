@@ -28,15 +28,15 @@ export default function PlayListTemplate({ songs, title, currentPlaylist }) {
 		<div id='playlist-page' className='inner-player'>
 			<NavBar />
 			<main className='page-content'>
-				<TopBar searchclass='hide' />
+				<TopBar searchclass='hide' src='../' />
 				<Section title={title} classname='playlist-header flex align-center'>
 					<figure className='playlist__thumbnail'>
 						<img
 							alt={
-								`Capa do ${currentPlaylist.type} ${currentPlaylist.title}` ||
-								'missing alt'
+								`Capa de ${currentPlaylist.type} ${currentPlaylist.title}` ||
+								'Arte de capa'
 							}
-							src={`assets/${currentPlaylist.title}.jfif`}
+							src={`../assets/${currentPlaylist.title}.jfif`}
 						/>
 					</figure>
 					<div className='text-wrapper'>
@@ -51,6 +51,13 @@ export default function PlayListTemplate({ songs, title, currentPlaylist }) {
 				</Section>
 				<Section title={title}>
 					<SongList songs={songs} playlist={currentPlaylist} />
+				</Section>
+				<Section title='Recomendados'>
+					<SongList
+						songs={songs}
+						playlist={currentPlaylist}
+						classprop='--alt'
+					/>
 				</Section>
 			</main>
 			<MusicPlayer />

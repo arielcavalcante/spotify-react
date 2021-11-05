@@ -8,26 +8,36 @@ import {
 	Player,
 	Library,
 	Playlist,
+	Profile,
 	Search,
 	Signup,
 } from './pages';
 import './assets/typography/Typography.css';
 import './App.css';
+import { useSelector } from 'react-redux';
 
 function App() {
+	const user = useSelector(({ user }) => user);
 	return (
 		<div className='App'>
 			<Router>
-				<Switch>
-					<Route path='/' exact component={Home} />
-					<Route path='/login' exact component={Login} />
-					<Route path='/search' exact component={Search} />} />
-					<Route path='/player' exact component={Player} />
-					<Route path='/faq' component={Faq} />
-					<Route path='/signup' component={Signup} />
-					<Route path='/playlists' component={Library} />
-					<Route path='/:link' component={Playlist} />
-				</Switch>
+				{user ? (
+					<Switch>
+						<Route path='/' exact component={Player} />
+						<Route path='/search' exact component={Search} />
+						<Route path='/playlists' exact component={Library} />
+						<Route path='/playlists/:link' component={Playlist} />
+						<Route path='/profile' exact component={Profile} />
+						<Route component={Player} />
+					</Switch>
+				) : (
+					<Switch>
+						<Route path='/' exact component={Home} />
+						<Route path='/login' exact component={Login} />
+						<Route path='/faq' exact component={Faq} />
+						<Route path='/signup' exact component={Signup} />
+					</Switch>
+				)}
 			</Router>
 		</div>
 	);

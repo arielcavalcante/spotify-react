@@ -6,11 +6,10 @@ import { Button, Search } from '../';
 import './TopBar.css';
 import { arrow_left, arrow_right } from '../../icons';
 
-export default function TopBar() {
+export default function TopBar({ searchclass, src }) {
 	const history = useHistory();
 	return (
 		<div className='topbar-component'>
-			{/* TODO:  Adicionar lógica ao componente -> se houver histórico pra frente ou pra trás, habilitar o respectivobotão. */}
 			<Button
 				onclick={() => history.go(-1)}
 				classname='black white-text arrow'
@@ -23,6 +22,13 @@ export default function TopBar() {
 				disabled
 			/>
 			<Search />
+			<Button
+				link='/profile'
+				classname='transparent profilebtn'
+				text={
+					<img src={`${src || ''}assets/temp/user.jpeg`} alt='Foto de perfil' />
+				}
+			/>
 		</div>
 	);
 }

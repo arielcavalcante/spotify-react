@@ -1,8 +1,57 @@
 #playlist-page {
 	position: relative;
 }
+#playlist-page section:not(:nth-of-type(3)) .section__header {
+	display: none;
+}
 #playlist-page .page-content {
 	width: 100vw;
+}
+.playlist-header {
+	gap: 2rem;
+	align-items: center;
+	flex-direction: column;
+}
+.playlist-header .text-wrapper {
+	max-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.playlist-header .text-wrapper .category__smallcaps {
+	display: none;
+}
+.playlist-header .text__huge {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+.playlist-header .subtitle {
+	color: #ffffffb3;
+	font-size: 0.875rem;
+	margin: 0 2rem 0.875rem;
+}
+
+.playlist-header h4,
+.playlist-header h6 {
+	font-variant: small-caps;
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	font-weight: 400;
+	color: #ffffffb3;
+	line-height: 1.5;
+}
+.playlist__thumbnail img {
+	width: 10rem;
+}
+#playlist-page section .section__header {
+	margin: 0 0.5rem 1rem;
+}
+
+@media (min-width: 411px) {
+	.playlist-header .text__huge {
+		font-size: 2.5rem;
+	}
 }
 
 @media (min-width: 768px) {
@@ -12,6 +61,11 @@
 	.playlist-header .text-wrapper .category__smallcaps {
 		flex-direction: row;
 		display: none;
+	}
+	.playlist-header h4,
+	.playlist-header h6 {
+		text-transform: capitalize;
+		font-variant: normal;
 	}
 	.playlist-header {
 		flex-direction: row;
@@ -31,15 +85,11 @@
 		margin: 0 0 1rem;
 	}
 	.playlist-header h4 {
-		text-transform: capitalize;
-		font-variant: normal;
 		color: white;
 		font-weight: 600;
-		line-height: 1.5;
 	}
 	.playlist-header h6 {
 		font-size: 0.875rem;
-		font-variant: normal;
 	}
 }
 @media (min-width: 1024px) {
