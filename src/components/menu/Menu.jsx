@@ -2,6 +2,7 @@ import React from 'react';
 import { v4 as uuid } from 'uuid';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { useHistory } from "react-router-dom";
 
 import './Menu.css';
 import { home, library, search } from '../../icons';
@@ -9,15 +10,17 @@ import { logout } from '../../pages/store/user.reducer';
 
 export default function Menu({ list }) {
 	const dispatch = useDispatch();
-
+	let history = useHistory();
 	const defaultlist = [
 		{ icon: home, title: 'Início', link: '/' },
 		{ icon: search, title: 'Pesquisa', link: '/search' },
 		{ icon: library, title: 'Sua Biblioteca', link: '/playlists' },
+		{ icon: library, title: 'Conta', link: '/profile' },
 		{ icon: library, title: 'Sair', link: null, action: handleLogout },
 	];
 	function handleLogout(){
 		dispatch(logout()) 
+		history.push("/");
 	}
 	return (
 		<div className='menu-component'>

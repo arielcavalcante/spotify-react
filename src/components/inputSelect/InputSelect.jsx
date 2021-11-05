@@ -11,8 +11,10 @@ export default function InputSelect({
 	label,
 	labelclass,
 	placeholder = 'Mês',
+	value = ''
 }) {
-	const [selected, setSelected] = useState('');
+	const [selected, setSelected] = useState(value);
+	console.log(selected)
 	const handleChange = ev => {
 		setSelected(ev.target.value);
 		onChange(ev.target.value);

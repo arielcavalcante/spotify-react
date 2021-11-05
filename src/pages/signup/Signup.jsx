@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavBar, Input, InputSelect, Button } from '../../components';
 import { useDispatch } from 'react-redux';
+import { useHistory } from "react-router-dom";
 
 import { logo_black } from '../../icons';
 import './Signup.css';
@@ -21,7 +22,7 @@ const formDefault = {
 const genders = ['Masculino', 'Feminino', 'Não-binário'];
 export default function Signup() {
 	const dispatch = useDispatch()
-	
+	let history = useHistory();
 	const [form, setForm] = useState(formDefault);
 	const [emailValid, setEmailValid] = useState(true);
 	const months = [
@@ -44,6 +45,7 @@ export default function Signup() {
 	const handleSubmit = ev => {
 		ev.preventDefault();
 		setForm(formDefault);
+		history.push("/");
 		dispatch(setUserData(form));
 	};
 	function checkEmails() {

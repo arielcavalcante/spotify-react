@@ -26,11 +26,11 @@ function App() {
 						(
 							<>
 							<Route path='/' exact component={Player} />
+							<Route path='/profile' component={Profile} />
 							<Route path='/search' exact component={Search} />
 							<Route path='/faq' component={Faq} />
 							<Route path='/playlists' component={Library} />
 							<Route path='/:link' component={Playlist} />
-              				<Route path='/profile' component={Profile} />
 							</>
 						) : (
 							<>

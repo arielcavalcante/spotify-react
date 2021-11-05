@@ -26,10 +26,10 @@ export default function Playlist() {
 
 	return (
 		<>
-			<PlayListTemplate
+			{/* <PlayListTemplate
 				songs={currentSongs}
 				currentPlaylist={currentPlaylist}
-			/>
+			/> */}
 		</>
 	);
 }

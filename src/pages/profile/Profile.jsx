@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 // import { NavLink } from 'react-router-dom';
-import { Button, Footer, Input, InputSelect, NavBar } from '../../components';
+import { Button, Footer, Input, InputSelect, NavBar, TopBar } from '../../components';
 
 import './Profile.css';
 import { edit, search, player } from '../../icons';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
+import { setUserData } from '../store/user.reducer';
 const formDefault = {
 	email: '',
 	password: '',
@@ -18,6 +19,8 @@ const formDefault = {
 };
 const genders = ['Masculino', 'Feminino', 'Não-binário'];
 export default function Profile() {
+
+	const dispatch = useDispatch()
 	const [form, setForm] = useState(formDefault);
 	const user = useSelector(({user}) => user);
 	const [emailValid, setEmailValid] = useState(true);
@@ -47,6 +50,7 @@ export default function Profile() {
 	const handleSubmit = ev => {
 		ev.preventDefault();
 		setForm(formDefault);
+		dispatch(setUserData({...user, form}));
 	};
 	function isValidated() {
 		return (
@@ -66,9 +70,14 @@ export default function Profile() {
 		{ icon: player, title: 'Player', link: '/player' },
 	];
 	return (
-		<div id='profile-page'>
+		console.log(user),
+		<div id='player-page' className='inner-player'>
+			<NavBar />
+			<main className='page-content'>
+				<TopBar />
+				<div id='profile-page'>
 			<main>
-				<NavBar classprop='--alt' list={navlist} />
+				{/* <NavBar classprop='--alt' list={navlist} /> */}
 				<section className='herocover'>
 					<div className='text-container'>
 						<h1 className='hero'>Olá!</h1>
@@ -84,6 +93,14 @@ export default function Profile() {
 				</section>
 				<section>
 					<form className='form-wrapper' onSubmit={handleSubmit}>
+						<Input
+							label='Como devemos te chamar?'
+							placeholder='Insira um nome de perfil'
+							name='cdcv'
+							value={form.cdcv}
+							onChange={ev => handleChange('cdcv', ev.target.value)}
+							fullWidth
+						/>						
 						<Input
 							label='Email'
 							type='email'
@@ -102,6 +119,7 @@ export default function Profile() {
 							label='Gênero'
 							options={genders}
 							placeholder='Gênero'
+							value={form.gender}
 							onChange={value => handleChange('gender', value)}
 						/>
 						<div className='inputs-row flex w-full align-center'>
@@ -127,27 +145,30 @@ export default function Profile() {
 								onChange={ev => handleChange('birth_year', ev.target.value)}
 							/>
 						</div>
-						<InputSelect
+						{/* <InputSelect
 							classname='country w-full'
 							label='País ou Região'
 							placeholder='Brasil'
 							disabled
-						/>
+						/> */}
 						<div className='row-revert w-full flex'>
 							<Button
 								text='salvar perfil'
 								classname='uppercase black-text'
 								disabled={!isValidated()}
 							/>
-							<Button
+							{/* <Button
 								text='cancelar'
 								classname='transparent uppercase black-text'
-							/>
+							/> */}
 						</div>
 					</form>
 				</section>
 			</main>
 			{/* <Footer /> */}
 		</div>
+			</main>
+		</div>		
+
 	);
 }
