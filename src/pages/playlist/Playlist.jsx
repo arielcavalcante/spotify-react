@@ -14,8 +14,7 @@ export default function Playlist() {
 	};
 
 	//metadata da playlist
-	const currentPlaylist = playlists.filter(fltrUrl)[0];
-
+	const currentPlaylist = playlists.filter(fltrUrl);
 	//lista de musicas
 	const currentSongs = []
 	// playlistSongs[currentPlaylist.playlist];

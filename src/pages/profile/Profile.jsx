@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import { NavLink } from 'react-router-dom';
 import { Button, Footer, Input, InputSelect, NavBar } from '../../components';
 
 import './Profile.css';
 import { edit, search, player } from '../../icons';
+
+import { useSelector } from 'react-redux';
 
 const formDefault = {
 	email: '',
@@ -17,6 +19,7 @@ const formDefault = {
 const genders = ['Masculino', 'Feminino', 'Não-binário'];
 export default function Profile() {
 	const [form, setForm] = useState(formDefault);
+	const user = useSelector(({user}) => user);
 	const [emailValid, setEmailValid] = useState(true);
 
 	const months = [
@@ -34,14 +37,16 @@ export default function Profile() {
 		'Dezembro',
 	];
 
+	useEffect(() => {
+		setForm(user);
+    }, []);
+
 	const handleChange = (field, newValue) => {
 		setForm({ ...form, [field]: newValue });
 	};
 	const handleSubmit = ev => {
 		ev.preventDefault();
 		setForm(formDefault);
-
-		console.log(form);
 	};
 	function isValidated() {
 		return (
@@ -86,13 +91,13 @@ export default function Profile() {
 							value={form.email}
 							onChange={ev => handleChange('email', ev.target.value)}
 						/>
-						<Input
+						{/* <Input
 							label='Senha'
 							type='password'
 							classname='w-full'
 							value={form.password}
 							onChange={ev => handleChange('password', ev.target.value)}
-						/>
+						/> */}
 						<InputSelect
 							label='Gênero'
 							options={genders}
@@ -142,7 +147,7 @@ export default function Profile() {
 					</form>
 				</section>
 			</main>
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 }
