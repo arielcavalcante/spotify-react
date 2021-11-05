@@ -9,9 +9,11 @@ export default function Input({
 	onBlur,
 	type = 'text',
 	name,
+	id,
 	label,
 	label2,
 	aria,
+	tabindex = 0,
 	error = false,
 	errorText = '',
 	classname,
@@ -25,16 +27,20 @@ export default function Input({
 }) {
 	return (
 		<div className='input-container'>
-			<label className={labelclass} htmlFor={name}>
-				{label}
-			</label>
+			{label ? (
+				<label className={labelclass} htmlFor={id || name}>
+					{label}
+				</label>
+			) : (
+				<></>
+			)}
 			<input
 				className={`custom-input ${classname || ''} ${
 					fullWidth ? 'w-full' : ''
 				}`}
 				placeholder={placeholder}
 				type={type}
-				id={name}
+				id={id}
 				name={name}
 				value={value ? value : undefined}
 				onChange={onChange}
@@ -45,10 +51,15 @@ export default function Input({
 				required={required}
 				autoComplete={autocomplete}
 				autoCorrect={autocorrect}
+				tabIndex={tabindex}
 			/>
-			<label htmlFor={name} className={labelclass}>
-				{label2}
-			</label>
+			{label2 ? (
+				<label className={labelclass} htmlFor={id || name}>
+					{label2}
+				</label>
+			) : (
+				<></>
+			)}
 			{error && <span>{errorText}</span>}
 		</div>
 	);

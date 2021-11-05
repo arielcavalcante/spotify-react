@@ -15,7 +15,7 @@ export default function Card({
 	return (
 		<div className={`card-component${classprop || ''}`}>
 			<Link
-				to={`${link}` || '/'}
+				to={`${link ? 'playlists/' + link : ''}`}
 				type={type || 'Álbum'}
 				className='card__clickarea'
 			>
