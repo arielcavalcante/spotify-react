@@ -9,4 +9,41 @@
 	#playlist-page .page-content {
 		width: calc(100vw - 16rem);
 	}
+	.playlist-header .text-wrapper .category__smallcaps {
+		flex-direction: row;
+		display: none;
+	}
+	.playlist-header {
+		flex-direction: row;
+		align-items: flex-end;
+	}
+	.playlist__thumbnail img {
+		width: 15rem;
+	}
+	.playlist-header .text-wrapper {
+		align-items: flex-start;
+		text-align: left;
+	}
+	.playlist-header .text__huge {
+		font-size: 3rem;
+	}
+	.playlist-header .subtitle {
+		margin: 0 0 1rem;
+	}
+	.playlist-header h4 {
+		text-transform: capitalize;
+		font-variant: normal;
+		color: white;
+		font-weight: 600;
+		line-height: 1.5;
+	}
+	.playlist-header h6 {
+		font-size: 0.875rem;
+		font-variant: normal;
+	}
+}
+@media (min-width: 1024px) {
+	.playlist-header .text__huge {
+		font-size: 4rem;
+	}
 }

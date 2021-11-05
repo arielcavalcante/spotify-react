@@ -15,10 +15,8 @@
 	height: 100vh;
 	width: 100%;
 	z-index: 1;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
-
-
 
 .card-component--card-alt {
 	transition: all 1s ease;
