@@ -15,7 +15,6 @@ export default function Menu({ list }) {
 		{ icon: home, title: 'Início', link: '/' },
 		{ icon: search, title: 'Pesquisa', link: '/search' },
 		{ icon: library, title: 'Sua Biblioteca', link: '/playlists' },
-		{ icon: library, title: 'Conta', link: '/profile' },
 		{ icon: library, title: 'Sair', link: null, action: handleLogout },
 	];
 	function handleLogout(){

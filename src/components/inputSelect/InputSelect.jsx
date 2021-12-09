@@ -14,7 +14,7 @@ export default function InputSelect({
 	value = ''
 }) {
 	const [selected, setSelected] = useState(value);
-	console.log(selected)
+
 	const handleChange = ev => {
 		setSelected(ev.target.value);
 		onChange(ev.target.value);
@@ -32,7 +32,7 @@ export default function InputSelect({
 				value={selected}
 				disabled={`${disabled ? 'disabled' : ''}`}
 			>
-				<option value='' disabled selected hidden>
+				<option value='' disabled defaultValue hidden>
 					{placeholder}
 				</option>
 				{options.map(opt => (

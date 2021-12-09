@@ -1,5 +1,5 @@
 [class^='card-component'] {
-	height: 17rem;
+	height: auto;
 	background-color: #181818;
 	padding: 1rem;
 	display: block;
@@ -84,4 +84,8 @@
 }
 [class$='card-alt']:hover {
 	background-color: #424142;
+}
+
+.add{
+	padding: 1rem 1rem;
 }

@@ -18,9 +18,9 @@ export default function Section({
 					<h5 className='section__title'>{title}</h5>
 					<p className='section__subtitle'>{subtitle}</p>
 				</div>
-				<NavLink className='category__smallcaps' to={`${link || '/'}`}>
+				{/* <NavLink className='category__smallcaps' to={`${link || '/'}`}>
 					<span>ver tudo</span>
-				</NavLink>
+				</NavLink> */}
 			</div>
 			{children}
 		</section>

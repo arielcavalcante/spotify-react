@@ -6,29 +6,21 @@ import {
 	Section,
 	TopBar,
 } from '../../components';
-
+import { useSelector } from 'react-redux';
 import './Library.css';
 import * as Provider from '../providers/provider';
 
 export default function Library() {
+	const user = useSelector(({user}) => user);
 	const [data, setData] = useState({
-		dailymixes: [],
 		playlists: [],
-		podcasts: [],
-		recentlyplayed: [],
 	});
 
 	async function loadContent(){
-		const dailymixes = await Provider.fetchDailyMixes();
-		const playlists = await Provider.fetchPlaylists();
-		const podcasts = await Provider.fetchPodcasts();
-		const recentlyplayed = await Provider.fetchRecentlyPlayed();
-		if(dailymixes && playlists && podcasts && recentlyplayed){
+		const playlists = await Provider.fetchPlaylistsByUser(user._id);
+		if(playlists){
 			setData({
-				dailymixes: dailymixes.data,
 				playlists: playlists.data,
-				podcasts: podcasts.data,
-				recentlyplayed: recentlyplayed.data,
 			})
 		}
 	}	
@@ -43,15 +35,6 @@ export default function Library() {
 				<TopBar />
 				<Section title='Suas playlists' link='playlists'>
 					<CardList cards={data.playlists} />
-				</Section>
-				<Section link='playlists'>
-					<CardList cards={data.dailymixes} />
-				</Section>
-				<Section link='playlists'>
-					<CardList cards={data.podcasts} />
-				</Section>
-				<Section link='playlists'>
-					<CardList cards={data.recentlyplayed} />
 				</Section>
 			</main>
 			<MusicPlayer />

@@ -1,35 +1,42 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
-
 import { PlayListTemplate } from '../../templates';
-
 import { playlistSongs } from '../../templates/playlisttemplate/data.js';
-import { playlists } from '../player/data.js';
+
+import * as Provider from '../providers/provider';
 
 export default function Playlist() {
 	const { link } = useParams();
+	const [playlist, setPlaylist] = useState()
 
-	const fltrUrl = item => {
-		return item.link === link;
-	};
+	async function loadContent(){
+		const playlist = await Provider.fetchPlaylistById(link);
+		if(playlist){
+			setPlaylist(playlist.data)
+		}
+	}		
+	useEffect(() => {
+		if(link){
+			loadContent();
+		}
+    }, []);
 
-	//metadata da playlist
-	const currentPlaylist = playlists.filter(fltrUrl);
-	//lista de musicas
-	const currentSongs = []
-	// playlistSongs[currentPlaylist.playlist];
-
-	//add id às musicas
-	currentSongs.map((s, i) => {
-		return (s.id = i + 1);
-	});
-
+	async function handleRemove(ev, playlist, song){
+		ev.preventDefault()
+		const removed = await Provider.removeMusicFromPlaylist(playlist._id, song)
+		if(removed){
+			loadContent();
+		}
+	}
+	if (!playlist) return null
+	
 	return (
 		<>
-			{/* <PlayListTemplate
-				songs={currentSongs}
-				currentPlaylist={currentPlaylist}
-			/> */}
+			<PlayListTemplate
+				songs={playlist.musics}
+				currentPlaylist={playlist}
+				callbackRemove={(ev, playlist, song) => handleRemove(ev, playlist, song)}
+			/>
 		</>
 	);
 }

@@ -9,11 +9,13 @@ import { edit, search, player } from '../../icons';
 
 import { setUserData } from '../store/user.reducer';
 
+import * as userProvider from '../providers/userProvider';
+
 const formDefault = {
 	email: '',
 	email_confirm: '',
 	password: '',
-	cdcv: '',
+	name: '',
 	birth_day: '',
 	birth_month: '',
 	birth_year: '',
@@ -44,9 +46,13 @@ export default function Signup() {
 	};
 	const handleSubmit = ev => {
 		ev.preventDefault();
-		setForm(formDefault);
-		history.push("/");
-		dispatch(setUserData(form));
+		userProvider.register(form).then((res) => {
+			dispatch(setUserData({_id: res.data._id, ...form}));
+			setForm(formDefault);
+			history.push("/");
+		}).catch((err) => {
+			console.log('err', err)
+		})
 	};
 	function checkEmails() {
 		if (
@@ -64,7 +70,7 @@ export default function Signup() {
 			form.email !== '' &&
 			form.email_confirm !== '' &&
 			form.password !== '' &&
-			form.cdcv !== '' &&
+			form.name !== '' &&
 			form.birth_day !== '' &&
 			form.birth_month !== '' &&
 			form.birth_year !== '' &&
@@ -125,9 +131,9 @@ export default function Signup() {
 							<Input
 								label='Como devemos te chamar?'
 								placeholder='Insira um nome de perfil'
-								name='cdcv'
-								value={form.cdcv}
-								onChange={ev => handleChange('cdcv', ev.target.value)}
+								name='name'
+								value={form.name}
+								onChange={ev => handleChange('name', ev.target.value)}
 								fullWidth
 							/>
 							<label className='input-label'>

@@ -14,6 +14,7 @@ export default function SongList({
 	subtitle,
 	title,
 	type,
+	callbackRemove
 }) {
 	return (
 		<div className={`songlist-component${classprop || ''}`}>
@@ -24,6 +25,7 @@ export default function SongList({
 						classprop={`${classprop || ''}`}
 						classname='lightgray-border uppercase'
 						playlist={playlist}
+						callbackRemove={(ev, id) => callbackRemove(ev, playlist, id)}
 						{...c}
 					/>
 				);

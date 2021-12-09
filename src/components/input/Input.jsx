@@ -22,6 +22,7 @@ export default function Input({
 	autocomplete,
 	autocorrect,
 	required = 'required',
+	disabled
 }) {
 	return (
 		<div className='input-container'>
@@ -45,6 +46,7 @@ export default function Input({
 				required={required}
 				autoComplete={autocomplete}
 				autoCorrect={autocorrect}
+				disabled={disabled}
 			/>
 			<label htmlFor={name} className={labelclass}>
 				{label2}

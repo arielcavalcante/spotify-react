@@ -13,11 +13,12 @@ export default function CardList({
 	subtitle,
 	title,
 	type,
+	callback
 }) {
 	return (
 		<div className={`cardlist-component${classprop || ''} hide-scrollbar`}>
 			{cards.map((c, i) => {
-				return <Card key={uuid()} classprop={classprop} {...c} />;
+				return <Card key={uuid()} classprop={classprop} {...c} callback={(ev, id) => callback(ev, id)}/>;
 			})}
 		</div>
 	);

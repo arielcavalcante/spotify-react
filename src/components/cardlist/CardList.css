@@ -1,5 +1,5 @@
 [class^='cardlist-component'] {
-	height: 17rem;
+	height: auto;
 	display: flex;
 	gap: 1.5rem;
 	overflow-y: hidden;

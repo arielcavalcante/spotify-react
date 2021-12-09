@@ -7,36 +7,30 @@ import {
 	Section,
 	TopBar,
 } from '../../components';
-
+import { useHistory } from "react-router-dom";
 import './Player.css';
 
 import * as Provider from '../providers/provider';
 import { useSelector } from 'react-redux';
 
 export default function Player() {
+	const history = useHistory();
 	const user = useSelector(({user}) => user);
-
 	const [data, setData] = useState({
-		dailymixes: [],
+		musics: [],
 		playlists: [],
-		podcasts: [],
-		recentlyplayed: [],
 	});
 
 	async function loadContent(){
-		const dailymixes = await Provider.fetchDailyMixes();
-		const playlists = await Provider.fetchPlaylists();
-		const podcasts = await Provider.fetchPodcasts();
-		const recentlyplayed = await Provider.fetchRecentlyPlayed();
-		if(dailymixes && playlists && podcasts && recentlyplayed){
+		const musics = await Provider.fetchMusics();
+		const playlists = await Provider.fetchAllPlaylists();
+		if(musics && playlists){
 			setData({
-				dailymixes: dailymixes.data,
+				musics: musics.data,
 				playlists: playlists.data,
-				podcasts: podcasts.data,
-				recentlyplayed: recentlyplayed.data,
 			})
 		}
-	}	
+	}		
 	useEffect(() => {
 		loadContent();
     }, []);
@@ -44,11 +38,11 @@ export default function Player() {
 	function shift() {
 		const hours = new Date().getHours();
 		if (hours >= 6 && hours < 12) {
-			return `Bom dia, ${user.cdcv}`;
+			return `Bom dia, ${user.name}`;
 		} else if (hours >= 12 && hours < 18) {
-			return `Bom tarde, ${user.cdcv}`;
+			return `Bom tarde, ${user.name}`;
 		} else {
-			return `Bom noite, ${user.cdcv}`;
+			return `Bom noite, ${user.name}`;
 		}
 	}
 
@@ -59,24 +53,26 @@ export default function Player() {
 			: (document.querySelector('.topbar-component').style.background =
 					'transparent');
 	};
+	async function handleAddNewMusic(ev, id){
+		ev.preventDefault();
+		const result = await Provider.addMusicNewPlaylist(user._id, id);
+		if(result){
+			history.push("/playlists");
+		}
+	}
 	return (
 		<div id='player-page' className='inner-player'>
 			<NavBar />
 			<main className='page-content' onLoad={scroll} onScroll={scroll}>
 				<TopBar />
-				<Section title={shift()} link='playlists'>
-					<CardList classprop='--card-alt' cards={data.recentlyplayed} />
-				</Section>
-				<Section title='Suas playlists' link='playlists'>
+				<Section title='Playlists do momento' link='playlists'>
 					<CardList cards={data.playlists} />
 				</Section>
-				<Section title='Seus programas' link='playlists'>
-					<CardList cards={data.podcasts} />
-				</Section>
-				<Section title='Feitos pra você' link='playlists'>
+				<Section title='Feitos pra você' link=''>
 					<CardList
-						cards={data.dailymixes}
+						cards={data.musics}
 						subtitle='Quanto mais você escutar, melhores recomendações vai receber.'
+						callback={(ev, id) => handleAddNewMusic(ev, id)}
 					/>
 				</Section>
 			</main>

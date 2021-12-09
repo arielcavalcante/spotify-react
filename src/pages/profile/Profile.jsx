@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import { NavLink } from 'react-router-dom';
+
 import { Button, Footer, Input, InputSelect, NavBar, TopBar } from '../../components';
 
 import './Profile.css';
@@ -8,9 +8,11 @@ import { edit, search, player } from '../../icons';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { setUserData } from '../store/user.reducer';
+
+import * as userProvider from '../providers/userProvider';
+
 const formDefault = {
-	email: '',
-	password: '',
+	name:'',
 	gender: '',
 	birth_day: '',
 	birth_month: '',
@@ -19,11 +21,9 @@ const formDefault = {
 };
 const genders = ['Masculino', 'Feminino', 'Não-binário'];
 export default function Profile() {
-
 	const dispatch = useDispatch()
 	const [form, setForm] = useState(formDefault);
 	const user = useSelector(({user}) => user);
-	const [emailValid, setEmailValid] = useState(true);
 
 	const months = [
 		'Janeiro',
@@ -41,7 +41,14 @@ export default function Profile() {
 	];
 
 	useEffect(() => {
-		setForm(user);
+		setForm({
+			name:user.name,
+			gender: user.gender,
+			birth_day: user.birth_day,
+			birth_month: user.birth_month,
+			birth_year: user.birth_year,
+			country: 'Brasil',
+		});
     }, []);
 
 	const handleChange = (field, newValue) => {
@@ -49,18 +56,20 @@ export default function Profile() {
 	};
 	const handleSubmit = ev => {
 		ev.preventDefault();
-		setForm(formDefault);
-		dispatch(setUserData({...user, form}));
+		userProvider.update({id: user._id, ...form}).then((res) => {
+			dispatch(setUserData({...user, ...form}));
+			setForm(formDefault);
+		}).catch((err) => {
+			console.log('err', err)
+		})		
 	};
 	function isValidated() {
 		return (
-			form.email !== '' &&
-			form.password !== '' &&
+			form.name !== '' &&
 			form.gender !== '' &&
 			form.birth_day !== '' &&
 			form.birth_month !== '' &&
-			form.birth_year !== '' &&
-			emailValid
+			form.birth_year !== ''
 		);
 	}
 
@@ -70,7 +79,6 @@ export default function Profile() {
 		{ icon: player, title: 'Player', link: '/player' },
 	];
 	return (
-		console.log(user),
 		<div id='player-page' className='inner-player'>
 			<NavBar />
 			<main className='page-content'>
@@ -96,16 +104,17 @@ export default function Profile() {
 						<Input
 							label='Como devemos te chamar?'
 							placeholder='Insira um nome de perfil'
-							name='cdcv'
-							value={form.cdcv}
-							onChange={ev => handleChange('cdcv', ev.target.value)}
+							name='name'
+							value={form.name}
+							onChange={ev => handleChange('name', ev.target.value)}
 							fullWidth
 						/>						
 						<Input
 							label='Email'
 							type='email'
 							classname='w-full'
-							value={form.email}
+							value={user.email}
+							disabled={true}
 							onChange={ev => handleChange('email', ev.target.value)}
 						/>
 						{/* <Input
@@ -145,28 +154,17 @@ export default function Profile() {
 								onChange={ev => handleChange('birth_year', ev.target.value)}
 							/>
 						</div>
-						{/* <InputSelect
-							classname='country w-full'
-							label='País ou Região'
-							placeholder='Brasil'
-							disabled
-						/> */}
 						<div className='row-revert w-full flex'>
 							<Button
 								text='salvar perfil'
 								classname='uppercase black-text'
 								disabled={!isValidated()}
 							/>
-							{/* <Button
-								text='cancelar'
-								classname='transparent uppercase black-text'
-							/> */}
 						</div>
 					</form>
 				</section>
 			</main>
-			{/* <Footer /> */}
-		</div>
+			</div>
 			</main>
 		</div>		
 

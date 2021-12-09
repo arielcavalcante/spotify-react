@@ -1,18 +1,33 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000/",
+  baseURL: "http://localhost:21262/api",
 });
 
-export function fetchPlaylists(){
-    return api.get("/playlists")    
+export function addMusicPlaylist(playlist_id, music_id){
+    return api.put(`/playlists/${playlist_id}/music/${music_id}/add`)    
 }
-export function fetchRecentlyPlayed(){
-    return api.get("/recentlyplayed")
+
+export function addMusicNewPlaylist(user_id, music_id){
+    return api.post(`/playlists/music/${music_id}/add`, {user: user_id})    
 }
-export function fetchPodcasts(){
-    return api.get("/podcasts") 
+
+export function removeMusicFromPlaylist(playlist_id, music_id){
+    return api.put(`/playlists/${playlist_id}/music/${music_id}/remove`)    
 }
-export function fetchDailyMixes(){
-    return api.get("/dailymixes")
+
+export function fetchPlaylistById(playlist_id){
+    return api.get(`/playlists/${playlist_id}`)    
+}
+
+export function fetchAllPlaylists(){
+    return api.get(`/playlists`)    
+}
+
+export function fetchPlaylistsByUser(user_id){
+    return api.get(`/playlists?user=${user_id}`)    
+}
+
+export function fetchMusics(){
+    return api.get("/musics")
 }
