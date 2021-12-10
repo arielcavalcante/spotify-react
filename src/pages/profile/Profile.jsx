@@ -58,7 +58,6 @@ export default function Profile() {
 		ev.preventDefault();
 		userProvider.update({id: user._id, ...form}).then((res) => {
 			dispatch(setUserData({...user, ...form}));
-			setForm(formDefault);
 		}).catch((err) => {
 			console.log('err', err)
 		})		

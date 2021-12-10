@@ -13,5 +13,5 @@ export function register(body){
 }
 
 export function update(body){
-    return api.post("/user/update", body)    
+    return api.put("/user/update", body)    
 }
