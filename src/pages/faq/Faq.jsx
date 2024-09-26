@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Accordion, Button, Footer, NavBar } from '../../components';
 
 import './Faq.css';
-import { edit, search, player } from '../../icons';
+import { edit, search, home } from '../../icons';
 
 export default function Faq() {
 	const list = [
@@ -59,9 +59,9 @@ export default function Faq() {
 		},
 	];
 	const navlist = [
-		{ icon: edit, title: 'Premium', link: '/signup' },
+		{ icon: home, title: 'Início', link: '/' },
+		{ icon: edit, title: 'Inscreva-se', link: '/signup' },
 		{ icon: search, title: 'Suporte', link: '/faq' },
-		{ icon: player, title: 'Player', link: '/player' },
 	];
 	return (
 		<div id='faq-page'>

@@ -17,11 +17,3 @@
 .songlist-component--card-alt {
 	height: 5rem;
 }
-
-
-/* @media only screen and (min-width: 768px) {
-	.songlist-component {
-		height: 18rem;
-		flex-wrap: wrap;
-	}
-} */

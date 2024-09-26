@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { NavBar, Input, InputSelect, Button } from '../../components';
-import { logo_black } from '../../icons';
 
+import { logo_black } from '../../icons';
 import './Signup.css';
-import { edit, search, player } from '../../icons';
+import { home, search, edit, player } from '../../icons';
+
+import { setUserData } from '../store/user.reducer';
 
 const formDefault = {
 	email: '',
@@ -17,6 +20,7 @@ const formDefault = {
 };
 const genders = ['Masculino', 'Feminino', 'Não-binário'];
 export default function Signup() {
+	const dispatch = useDispatch();
 	const [form, setForm] = useState(formDefault);
 	const [emailValid, setEmailValid] = useState(true);
 	const months = [
@@ -39,16 +43,8 @@ export default function Signup() {
 	const handleSubmit = ev => {
 		ev.preventDefault();
 		setForm(formDefault);
-
-		download(JSON.stringify(form), 'json.txt', 'text/plain');
+		dispatch(setUserData(form));
 	};
-	function download(content, fileName, contentType) {
-		var a = document.createElement('a');
-		var file = new Blob([content], { type: contentType });
-		a.href = URL.createObjectURL(file);
-		a.download = fileName;
-		a.click();
-	}
 	function checkEmails() {
 		if (
 			form.email !== form.email_confirm &&
@@ -74,9 +70,10 @@ export default function Signup() {
 		);
 	}
 	const navlist = [
-		{ icon: edit, title: 'Premium', link: '/signup' },
+		{ icon: home, title: 'Início', link: '/' },
 		{ icon: search, title: 'Suporte', link: '/faq' },
-		{ icon: player, title: 'Player', link: '/player' },
+		{ icon: edit, title: 'Inscreva-se', link: '/signup' },
+		{ icon: player, title: 'Login', link: '/login' },
 	];
 	return (
 		<main id='signup-page'>
@@ -141,7 +138,6 @@ export default function Signup() {
 										placeholder='Dia'
 										name='dia'
 										type='number'
-										labelclass='font-regular'
 										value={form.birth_day}
 										onChange={ev => handleChange('birth_day', ev.target.value)}
 										fullWidth
@@ -151,7 +147,6 @@ export default function Signup() {
 									<InputSelect
 										label='Mês'
 										placeholder='Mês'
-										labelclass='font-regular'
 										name='mes'
 										options={months}
 										onChange={value => handleChange('birth_month', value)}
@@ -173,12 +168,13 @@ export default function Signup() {
 								className='flex align-items-center'
 								style={{ margin: '16px 0' }}
 							>
-								{genders.map(g => {
+								{genders.map((g, i) => {
 									return (
-										<div className='flex align-items-center pr-12'>
+										<div className='flex align-items-center pr-12' key={i}>
 											<Input
 												value={g}
 												label2={g}
+												id={g}
 												classname='black-text flex'
 												type={'radio'}
 												name='gender'

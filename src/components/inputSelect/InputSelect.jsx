@@ -19,7 +19,6 @@ export default function InputSelect({
 	};
 	return (
 		<div className={`select-container ${classname || ''}`}>
-
 			<label className={labelclass} htmlFor={name}>
 				{label}
 			</label>
@@ -30,7 +29,7 @@ export default function InputSelect({
 				value={selected}
 				disabled={`${disabled ? 'disabled' : ''}`}
 			>
-				<option value='' disabled selected hidden>
+				<option value='' disabled defaultValue hidden>
 					{placeholder}
 				</option>
 				{options.map(opt => (
